@@ -1,0 +1,6 @@
+# GitHub Pages configuration
+title: UI/UX Developer Guide
+description: A comprehensive guide to becoming a UI/UX developer, from basics to advanced concepts
+theme: jekyll-theme-cayman
+show_downloads: false
+google_analytics:
