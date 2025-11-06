@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://anandbinuarjun.github.io/sitemap.xml
