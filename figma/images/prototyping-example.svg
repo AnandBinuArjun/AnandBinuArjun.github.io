@@ -1,0 +1,30 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Screen 1 -->
+  <rect x="50" y="80" width="120" height="180" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="70" y="100" width="80" height="30" rx="4" fill="#4299e1" opacity="0.7"/>
+  <text x="110" y="120" font-family="Arial" font-size="10" fill="white" text-anchor="middle">Button</text>
+  <text x="110" y="160" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Screen 1</text>
+  
+  <!-- Screen 2 -->
+  <rect x="230" y="80" width="120" height="180" rx="8" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="250" y="100" width="80" height="20" rx="4" fill="#edf2f7"/>
+  <rect x="250" y="130" width="80" height="60" rx="4" fill="#edf2f7"/>
+  <text x="290" y="160" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Screen 2</text>
+  
+  <!-- Connection arrow -->
+  <line x1="170" y1="115" x2="230" y2="115" stroke="#4299e1" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#4299e1"/>
+    </marker>
+  </defs>
+  
+  <!-- Labels -->
+  <text x="200" y="40" font-family="Arial" font-size="16" fill="#2d3748" text-anchor="middle">Prototyping Example</text>
+  <text x="200" y="60" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Click interaction between screens</text>
+  <text x="200" y="280" font-family="Arial" font-size="10" fill="#4a5568" text-anchor="middle">Interactive prototype with transitions</text>
+</svg>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Plugin Development - Figma Developer Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="progress-indicator"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+            <div class="logo">FigmaDev Guide</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="plugins.html" class="active">Plugins</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="content-section">
+            <div class="container">
+                <h1>Figma Plugin Development</h1>
+                <p>Figma plugins extend the functionality of Figma using web technologies. With plugins, you can automate repetitive tasks, connect Figma to other tools, and add completely new capabilities to Figma.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2>Plugin Basics</h2>
+                        <p>Figma plugins are built using web technologies you already know: HTML, CSS, and JavaScript (or TypeScript). They run in a sandboxed environment within Figma.</p>
+                        <div class="figure-container">
+                            <img src="images/figma-interface.svg" alt="Figma Plugin Development" class="educational-diagram">
+                            <div class="figure-caption">Figma plugin development environment with code editor</div>
+                        </div>
+                        <div class="interactive-element">
+                            <h3>Types of Plugins</h3>
+                            <ul>
+                                <li><strong>Utility Plugins:</strong> Automate repetitive tasks</li>
+                                <li><strong>Integration Plugins:</strong> Connect Figma to other tools</li>
+                                <li><strong>Content Plugins:</strong> Generate or manipulate design content</li>
+                                <li><strong>Analysis Plugins:</strong> Analyze designs for various metrics</li>
+                                <li><strong>Export Plugins:</strong> Export designs in custom formats</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <h4>Plugin Selection Guide:</h4>
+                                <ul>
+                                    <li>Utility plugins for daily workflow improvements</li>
+                                    <li>Integration plugins for toolchain connectivity</li>
+                                    <li>Content plugins for design asset generation</li>
+                                    <li>Analysis plugins for design quality assurance</li>
+                                    <li>Export plugins for specialized delivery formats</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Plugin Architecture</h3>
+                            <p>Figma plugins consist of two main parts:</p>
+                            <ul>
+                                <li><strong>Manifest:</strong> A JSON file that describes the plugin</li>
+                                <li><strong>Code:</strong> JavaScript/TypeScript files that implement the plugin functionality</li>
+                            </ul>
+                            <ul>
+                                <li><strong>UI:</strong> Optional HTML/CSS interface for user interaction</li>
+                                <li><strong>Icons:</strong> Visual representation in the plugin menu</li>
+                                <li><strong>Dependencies:</strong> External libraries and resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Setting Up Development Environment</h2>
+                        <p>Before you start developing plugins, you'll need to set up your development environment.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Required Tools</h3>
+                            <ul>
+                                <li><strong>Figma Desktop App:</strong> Required for plugin development and testing</li>
+                                <li><strong>Code Editor:</strong> Visual Studio Code is recommended</li>
+                                <li><strong>Node.js:</strong> For package management and build tools</li>
+                                <li><strong>TypeScript:</strong> Recommended for better development experience</li>
+                            </ul>
+                            <ul>
+                                <li><strong>Git:</strong> For version control and collaboration</li>
+                                <li><strong>ESLint:</strong> For code quality and consistency</li>
+                                <li><strong>Prettier:</strong> For code formatting</li>
+                                <li><strong>Figma Plugin API Docs:</strong> For reference documentation</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Installation Steps</h3>
+                            <ol>
+                                <li>Download and install the Figma desktop app</li>
+                                <li>Install Node.js from <a href="https://nodejs.org" target="_blank">nodejs.org</a></li>
+                                <li>Install Visual Studio Code</li>
+                                <li>Install the Figma plugin template using npx</li>
+                            </ol>
+                            <ul>
+                                <li>Set up ESLint and Prettier configurations</li>
+                                <li>Configure TypeScript settings</li>
+                                <li>Install recommended VS Code extensions</li>
+                                <li>Create a development workspace</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Development Environment Tips:</h3>
+                            <ul>
+                                <li>Use a consistent folder structure for projects</li>
+                                <li>Set up linting rules for code quality</li>
+                                <li>Configure debugging tools for efficient development</li>
+                                <li>Use version control from the start</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Creating Your First Plugin</h2>
+                        <p>Let's create a simple plugin that creates rectangles on the canvas.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Step-by-Step Process</h3>
+                            <ol>
+                                <li>Open Figma desktop app and create a new design file</li>
+                                <li>Go to Plugins > Development > New Plugin</li>
+                                <li>Name your plugin and choose "Custom UI"</li>
+                                <li>Open the plugin folder in your code editor</li>
+                                <li>Modify the code.js file to implement your functionality</li>
+                            </ol>
+                            <ul>
+                                <li>Review the manifest.json file structure</li>
+                                <li>Understand the plugin lifecycle</li>
+                                <li>Test your plugin during development</li>
+                                <li>Debug using Figma's developer tools</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Basic Plugin Structure</h3>
+                            <pre><code>// code.js
+figma.showUI(__html__);
+
+figma.ui.onmessage = msg => {
+  if (msg.type === 'create-rectangles') {
+    const nodes = [];
+    for (let i = 0; i < msg.count; i++) {
+      const rect = figma.createRectangle();
+      rect.x = i * 150;
+      rect.fills = [{type: 'SOLID', color: {r: 1, g: 0.5, b: 0}}];
+      figma.currentPage.appendChild(rect);
+      nodes.push(rect);
+    }
+    figma.currentPage.selection = nodes;
+    figma.viewport.scrollAndZoomIntoView(nodes);
+  }
+  
+  figma.closePlugin();
+};</code></pre>
+                            <ul>
+                                <li>figma.showUI() displays the plugin interface</li>
+                                <li>figma.ui.onmessage handles messages from the UI</li>
+                                <li>figma.create* methods create design elements</li>
+                                <li>figma.closePlugin() terminates the plugin</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Plugin Development Best Practices:</h3>
+                            <ul>
+                                <li>Start with simple functionality</li>
+                                <li>Test frequently during development</li>
+                                <li>Handle errors gracefully</li>
+                                <li>Provide clear user feedback</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Figma Plugin API</h2>
+                        <p>The Figma Plugin API provides access to Figma's document structure and allows you to manipulate design elements programmatically.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Key API Concepts</h3>
+                            <ul>
+                                <li><strong>Nodes:</strong> All elements in Figma are represented as nodes</li>
+                                <li><strong>Document Tree:</strong> The hierarchical structure of a Figma file</li>
+                                <li><strong>Selection:</strong> Access and modify the user's current selection</li>
+                                <li><strong>UI:</strong> Create custom interfaces for your plugins</li>
+                            </ul>
+                            <ul>
+                                <li><strong>Styles:</strong> Access and modify design styles</li>
+                                <li><strong>Variables:</strong> Work with design variables</li>
+                                <li><strong>Storage:</strong> Persist data between plugin sessions</li>
+                                <li><strong>Network:</strong> Make HTTP requests from plugins</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Common API Methods</h3>
+                            <ul>
+                                <li><code>figma.createRectangle()</code> - Create a new rectangle</li>
+                                <li><code>figma.currentPage</code> - Access the current page</li>
+                                <li><code>figma.currentPage.selection</code> - Get or set the current selection</li>
+                                <li><code>figma.showUI()</code> - Display a custom UI for your plugin</li>
+                            </ul>
+                            <ul>
+                                <li><code>figma.loadFontAsync()</code> - Load fonts for text manipulation</li>
+                                <li><code>figma.clientStorage</code> - Store data locally</li>
+                                <li><code>figma.ui.postMessage()</code> - Send messages to the UI</li>
+                                <li><code>figma.notify()</code> - Show notifications to users</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>API Usage Tips:</h3>
+                            <ul>
+                                <li>Always load fonts before manipulating text</li>
+                                <li>Handle API errors gracefully</li>
+                                <li>Use async/await for API calls</li>
+                                <li>Test plugins with various document structures</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Advanced Plugin Features</h2>
+                        <p>Take your plugins to the next level with advanced features.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>External API Integration</h3>
+                            <p>Connect your plugins to external services:</p>
+                            <ul>
+                                <li>Fetch data from REST APIs</li>
+                                <li>Integrate with design systems</li>
+                                <li>Connect to project management tools</li>
+                            </ul>
+                            <ul>
+                                <li>Handle rate limiting and quotas</li>
+                                <li>Implement retry logic for failed requests</li>
+                                <li>Cache responses for better performance</li>
+                                <li>Secure API credentials properly</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Data Storage</h3>
+                            <p>Store data for your plugins:</p>
+                            <ul>
+                                <li>ClientStorage for user-specific data</li>
+                                <li>Plugin-specific settings</li>
+                                <li>Cache data for better performance</li>
+                            </ul>
+                            <ul>
+                                <li>Use structured data formats (JSON)</li>
+                                <li>Implement data migration strategies</li>
+                                <li>Handle storage limits gracefully</li>
+                                <li>Provide data export/import functionality</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Authentication</h3>
+                            <p>Implement authentication for services that require it:</p>
+                            <ul>
+                                <li>OAuth flows</li>
+                                <li>API key management</li>
+                                <li>Secure token storage</li>
+                            </ul>
+                            <ul>
+                                <li>Use secure storage for credentials</li>
+                                <li>Implement token refresh mechanisms</li>
+                                <li>Handle authentication errors gracefully</li>
+                                <li>Provide clear login/logout flows</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Advanced Plugin Techniques:</h3>
+                            <ul>
+                                <li>Implement real-time collaboration features</li>
+                                <li>Create plugin-to-plugin communication</li>
+                                <li>Build custom UI components</li>
+                                <li>Optimize performance for large documents</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Plugin Distribution</h2>
+                        <p>Share your plugins with the world through the Figma Community.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Publishing to Figma Community</h3>
+                            <ol>
+                                <li>Test your plugin thoroughly</li>
+                                <li>Create a compelling description and screenshots</li>
+                                <li>Submit your plugin through the Figma desktop app</li>
+                                <li>Respond to user feedback and update as needed</li>
+                            </ol>
+                            <ul>
+                                <li>Write clear installation instructions</li>
+                                <li>Create tutorial videos or guides</li>
+                                <li>Provide example use cases</li>
+                                <li>Include version release notes</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Best Practices</h3>
+                            <ul>
+                                <li>Provide clear documentation</li>
+                                <li>Handle errors gracefully</li>
+                                <li>Optimize performance</li>
+                                <li>Follow Figma's design guidelines</li>
+                            </ul>
+                            <ul>
+                                <li>Implement comprehensive error handling</li>
+                                <li>Provide user feedback during operations</li>
+                                <li>Optimize for different document sizes</li>
+                                <li>Support internationalization</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Distribution Strategies:</h3>
+                            <ul>
+                                <li>Use semantic versioning for releases</li>
+                                <li>Create a changelog for updates</li>
+                                <li>Engage with the community for feedback</li>
+                                <li>Monitor plugin usage and analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Practice Exercise</h2>
+                    <p>Create a plugin that generates a color palette from selected elements:</p>
+                    <ul>
+                        <li>Create a plugin with a custom UI</li>
+                        <li>Access the user's selection</li>
+                        <li>Extract colors from selected elements</li>
+                        <li>Display the color palette in the plugin UI</li>
+                        <li>Allow users to export the palette</li>
+                    </ul>
+                    <p>For an extra challenge, add the ability to save palettes and recall them later.</p>
+                    
+                    <div class="interactive-element">
+                        <h3>Advanced Challenge</h3>
+                        <p>Enhance your plugin with these additional features:</p>
+                        <ul>
+                            <li>Add color contrast checking for accessibility</li>
+                            <li>Implement palette generation from images</li>
+                            <li>Create theme switching capabilities</li>
+                            <li>Add integration with design systems</li>
+                            <li>Include color blindness simulation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Popular Plugin Examples</h2>
+                    <p>Study these popular plugins to understand advanced plugin development techniques:</p>
+                    
+                    <div class="certification-card">
+                        <h3>Automate</h3>
+                        <p>A powerful plugin that automates repetitive design tasks.</p>
+                        <p><strong>Key Features:</strong> Batch operations, layout automation, data population</p>
+                        <p><a href="https://www.figma.com/community/plugin/731627216655469013/Automate" target="_blank">View Plugin →</a></p>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h3>Content Reel</h3>
+                        <p>Generates realistic placeholder content for designs.</p>
+                        <p><strong>Key Features:</strong> Name generator, avatar library, data sets</p>
+                        <p><a href="https://www.figma.com/community/plugin/748533339900865323/Content-reel" target="_blank">View Plugin →</a></p>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h3>Stark</h3>
+                        <p>Ensures designs are accessible and inclusive.</p>
+                        <p><strong>Key Features:</strong> Contrast checking, color blindness simulation</p>
+                        <p><a href="https://www.figma.com/community/plugin/732603254453395948/Stark" target="_blank">View Plugin →</a></p>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Plugin Development Resources</h2>
+                    <div class="highlight-box">
+                        <h3>Essential Tools & Libraries</h3>
+                        <ul>
+                            <li><a href="https://github.com/thomas-lowry/figma-plugin-boilerplate" target="_blank">Plugin Boilerplate</a> - Starter template for Figma plugins</li>
+                            <li><a href="https://github.com/figma/plugin-samples" target="_blank">Plugin Samples</a> - Official sample plugins from Figma</li>
+                            <li><a href="https://www.figma.com/plugin-docs/" target="_blank">Plugin Documentation</a> - Official plugin development documentation</li>
+                            <li><a href="https://github.com/figma/widget-samples" target="_blank">Widget Samples</a> - Sample widgets from Figma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Figma Developer Guide &copy; 2023 | Learn Figma from basics to advanced techniques</p>
+            <p>This educational resource is designed to help you master Figma development skills through structured learning paths and hands-on practice.</p>
+            <p>Created by Anand Binu Arjun</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Mermaid charts
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({
+                    startOnLoad: true,
+                    theme: 'default',
+                    flowchart: {
+                        useMaxWidth: true
+                    }
+                });
+                
+                // Re-render charts when cards are animated into view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            mermaid.run();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                document.querySelectorAll('.flowchart').forEach(chart => {
+                    observer.observe(chart);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Figma - Figma Developer Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="progress-indicator"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+            <div class="logo">FigmaDev Guide</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html" class="active">Advanced</a></li>
+                <li><a href="plugins.html">Plugins</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="content-section">
+            <div class="container">
+                <h1>Advanced Figma Techniques</h1>
+                <p>In this advanced section, we'll explore Figma's most powerful features that enable you to create sophisticated design systems and complex prototypes. These skills will set you apart as a Figma expert.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2>Design Systems</h2>
+                        <p>A design system is a comprehensive collection of reusable components, guidelines, and principles that guide the design of a product. Figma provides powerful tools to create and maintain design systems.</p>
+                        <div class="figure-container">
+                            <img src="images/components-example.svg" alt="Figma Design System" class="educational-diagram">
+                            <div class="figure-caption">Design system with consistent components and styles</div>
+                        </div>
+                        <div class="interactive-element">
+                            <h3>Key Elements of a Design System</h3>
+                            <ul>
+                                <li><strong>Design Principles:</strong> Foundational philosophies that guide design decisions</li>
+                                <li><strong>Color Palette:</strong> Consistent set of colors with clear hierarchy</li>
+                                <li><strong>Typography:</strong> Defined font families, sizes, and weights</li>
+                                <li><strong>Spacing System:</strong> Consistent spacing and layout grid</li>
+                                <li><strong>Component Library:</strong> Reusable UI components</li>
+                                <li><strong>Documentation:</strong> Clear guidelines for using the system</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Building a Design System in Figma</h3>
+                            <ol>
+                                <li>Create a dedicated file for your design system</li>
+                                <li>Define your color palette using styles</li>
+                                <li>Establish typography styles</li>
+                                <li>Create component library with variants</li>
+                                <li>Document usage guidelines</li>
+                                <li>Publish as a library for team use</li>
+                            </ol>
+                            <ul>
+                                <li>Start with foundational elements before complex components</li>
+                                <li>Iterate and refine based on team feedback</li>
+                                <li>Maintain consistency across all design elements</li>
+                                <li>Regularly audit and update the system</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Design System Benefits:</h3>
+                            <ul>
+                                <li>Faster design and development processes</li>
+                                <li>Consistent user experience across products</li>
+                                <li>Easier onboarding for new team members</li>
+                                <li>Reduced design debt and technical debt</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Advanced Design System Techniques</h3>
+                            <ul>
+                                <li>Use variables for dynamic theming</li>
+                                <li>Implement design tokens for cross-platform consistency</li>
+                                <li>Create component composition guidelines</li>
+                                <li>Establish accessibility standards</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Variables</h2>
+                        <p>Variables in Figma allow you to store and reuse values across your designs, making it easier to create dynamic and themeable designs.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Types of Variables</h3>
+                            <ul>
+                                <li><strong>Color Variables:</strong> Store color values for consistent theming</li>
+                                <li><strong>Number Variables:</strong> Store numerical values like spacing or border radius</li>
+                                <li><strong>String Variables:</strong> Store text values</li>
+                                <li><strong>Boolean Variables:</strong> Store true/false values for conditional logic</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <h4>Variable Use Cases:</h4>
+                                <ul>
+                                    <li>Theme switching (light/dark mode)</li>
+                                    <li>Brand customization</li>
+                                    <li>Responsive design values</li>
+                                    <li>Design token implementation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Working with Modes</h3>
+                            <p>Modes allow you to create different versions of your variables, perfect for light/dark themes or different brand variations.</p>
+                            <ul>
+                                <li>Create multiple modes in the Variables panel</li>
+                                <li>Assign different values to variables in each mode</li>
+                                <li>Switch between modes to see different theme variations</li>
+                            </ul>
+                            <ul>
+                                <li>Use mode inheritance for efficient management</li>
+                                <li>Create mode-specific overrides when needed</li>
+                                <li>Test all modes thoroughly</li>
+                                <li>Document mode usage for team members</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Variables Workflow</h3>
+                            <p>Follow this workflow to implement variables effectively:</p>
+                            <ol>
+                                <li>Identify reusable values in your design (colors, spacing, typography)</li>
+                                <li>Create variables for these values</li>
+                                <li>Apply variables to your design elements</li>
+                                <li>Create modes for different themes</li>
+                                <li>Test switching between modes</li>
+                            </ol>
+                            <ul>
+                                <li>Start with color variables for immediate impact</li>
+                                <li>Use number variables for consistent spacing</li>
+                                <li>Implement string variables for consistent text</li>
+                                <li>Leverage boolean variables for conditional states</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Advanced Variable Techniques:</h3>
+                            <ul>
+                                <li>Use mathematical expressions with variables</li>
+                                <li>Combine variables with Auto Layout for responsive designs</li>
+                                <li>Sync variables across team libraries</li>
+                                <li>Create variable-driven design systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Advanced Prototyping</h2>
+                        <p>Take your prototypes to the next level with advanced interactions and conditional logic.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Smart Animate</h3>
+                            <p>Smart Animate creates smooth transitions between frames by automatically animating matching layers.</p>
+                            <ul>
+                                <li>Ensure matching layer names between frames</li>
+                                <li>Use Auto Layout for better Smart Animate results</li>
+                                <li>Combine with other animation types for complex transitions</li>
+                            </ul>
+                            <ul>
+                                <li>Use consistent layer naming conventions</li>
+                                <li>Test animations on actual devices</li>
+                                <li>Optimize for performance with fewer layers</li>
+                                <li>Combine with easing functions for natural motion</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Conditional Logic</h3>
+                            <p>Create interactive prototypes with conditional navigation based on user input.</p>
+                            <ul>
+                                <li>Use component properties to store state</li>
+                                <li>Set up conditional connections in Prototype mode</li>
+                                <li>Combine with variables for dynamic content</li>
+                            </ul>
+                            <ul>
+                                <li>Create decision trees for complex flows</li>
+                                <li>Use boolean logic for validation states</li>
+                                <li>Implement error states and recovery paths</li>
+                                <li>Test all conditional branches thoroughly</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Advanced Interaction Techniques</h3>
+                            <ul>
+                                <li>Keyboard navigation and shortcuts</li>
+                                <li>Scroll-driven animations</li>
+                                <li>Mathematical expressions in prototypes</li>
+                                <li>Plugin integrations for enhanced functionality</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flowchart-container">
+                            <h3>Prototyping Workflow</h3>
+                            <div class="flowchart">
+                                <pre class="mermaid">
+graph TD
+    A[Define User Flow] --> B[Create Wireframes]
+    B --> C[Design High-Fidelity Screens]
+    C --> D[Add Interactive Elements]
+    D --> E[Set Up Connections]
+    E --> F[Configure Transitions]
+    F --> G[Add Conditional Logic]
+    G --> H[Test Prototype]
+    H --> I[Share with Stakeholders]
+                                </pre>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Prototyping Best Practices:</h3>
+                            <ul>
+                                <li>Start with low-fidelity prototypes for early feedback</li>
+                                <li>Iterate based on user testing results</li>
+                                <li>Document interaction patterns for consistency</li>
+                                <li>Optimize for different device sizes and orientations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Collaboration Features</h2>
+                        <p>Figma's collaboration features are what make it truly powerful for team workflows.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Real-time Collaboration</h3>
+                            <ul>
+                                <li>Multiple designers can work simultaneously on the same file</li>
+                                <li>See cursors and selection states of other collaborators</li>
+                                <li>Live updates as others make changes</li>
+                            </ul>
+                            <ul>
+                                <li>Use naming conventions for clear communication</li>
+                                <li>Set up team libraries for shared resources</li>
+                                <li>Establish design review processes</li>
+                                <li>Use file permissions to control access</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Commenting and Feedback</h3>
+                            <ul>
+                                <li>Add comments directly on design elements</li>
+                                <li>Use @mentions to notify team members</li>
+                                <li>Resolve comments when issues are addressed</li>
+                            </ul>
+                            <ul>
+                                <li>Use comment threads for detailed discussions</li>
+                                <li>Set up notification preferences</li>
+                                <li>Create templates for common feedback types</li>
+                                <li>Integrate with project management tools</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Version History</h3>
+                            <p>Figma automatically saves versions of your files, allowing you to revert to previous states.</p>
+                            <ul>
+                                <li>Access version history from the file menu</li>
+                                <li>Compare versions side-by-side</li>
+                                <li>Restore previous versions if needed</li>
+                            </ul>
+                            <ul>
+                                <li>Use meaningful commit messages for important changes</li>
+                                <li>Set up version naming conventions</li>
+                                <li>Create branches for experimental work</li>
+                                <li>Use restore points for major milestones</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Advanced Collaboration Techniques:</h3>
+                            <ul>
+                                <li>Use Dev Mode for developer handoff</li>
+                                <li>Implement design system governance</li>
+                                <li>Create component documentation</li>
+                                <li>Establish feedback workflows</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Advanced Component Techniques</h2>
+                        <p>Master complex component structures for scalable design systems.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Nested Components</h3>
+                            <p>Build complex components by nesting other components inside them.</p>
+                            <ul>
+                                <li>Create atomic components first (icons, badges)</li>
+                                <li>Combine atomic components into molecules (buttons, inputs)</li>
+                                <li>Assemble molecules into organisms (forms, cards)</li>
+                            </ul>
+                            <ul>
+                                <li>Use consistent naming for nested components</li>
+                                <li>Document component dependencies</li>
+                                <li>Test nested components in isolation</li>
+                                <li>Optimize for performance with shallow nesting</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Component Properties</h3>
+                            <p>Go beyond variants with custom component properties.</p>
+                            <ul>
+                                <li>Text properties for editable content</li>
+                                <li>Boolean properties for toggling features</li>
+                                <li>Instance swap properties for replacing nested components</li>
+                            </ul>
+                            <ul>
+                                <li>Use property inheritance for efficient management</li>
+                                <li>Create property validation rules</li>
+                                <li>Document property usage guidelines</li>
+                                <li>Test property combinations thoroughly</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Advanced Component Patterns</h3>
+                            <ul>
+                                <li>State management with component properties</li>
+                                <li>Dynamic content with text properties</li>
+                                <li>Conditional rendering with boolean properties</li>
+                                <li>Component composition with instance swaps</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flowchart-container">
+                            <h3>Component Hierarchy</h3>
+                            <div class="flowchart">
+                                <pre class="mermaid">
+graph TD
+    A[Design System] --> B[Component Library]
+    B --> C[Atomic Components]
+    B --> D[Molecular Components]
+    B --> E[Organismic Components]
+    C --> F[Icons]
+    C --> G[Badges]
+    D --> H[Buttons]
+    D --> I[Input Fields]
+    E --> J[Cards]
+    E --> K[Navigation Bars]
+    E --> L[Forms]
+                                </pre>
+                            </div>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Component Best Practices:</h3>
+                            <ul>
+                                <li>Maintain consistent component APIs</li>
+                                <li>Document component usage and limitations</li>
+                                <li>Version components for backward compatibility</li>
+                                <li>Test components across different contexts</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Design Engineering</h2>
+                        <p>Bridge the gap between design and development with developer-focused features.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Inspect Panel</h3>
+                            <p>The Inspect panel provides developers with all the information they need to implement designs.</p>
+                            <ul>
+                                <li>Measurements and spacing information</li>
+                                <li>CSS code snippets</li>
+                                <li>Asset export options</li>
+                            </ul>
+                            <ul>
+                                <li>Use Dev Mode for enhanced inspection capabilities</li>
+                                <li>Generate design tokens automatically</li>
+                                <li>Export component specifications</li>
+                                <li>Share inspection links with developers</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Exporting Assets</h3>
+                            <ul>
+                                <li>Export frames and components at multiple resolutions</li>
+                                <li>Choose from various file formats (PNG, JPG, SVG, PDF)</li>
+                                <li>Use export settings for consistent asset delivery</li>
+                            </ul>
+                            <ul>
+                                <li>Set up export presets for common use cases</li>
+                                <li>Use naming conventions for exported assets</li>
+                                <li>Organize exports in a logical folder structure</li>
+                                <li>Document export specifications for developers</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Advanced Developer Features</h3>
+                            <ul>
+                                <li>Dev Mode for enhanced collaboration</li>
+                                <li>Design token generation</li>
+                                <li>Code component integration</li>
+                                <li>Version control for design specs</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Developer Handoff Checklist</h3>
+                            <ul>
+                                <li>✓ All components are properly named and organized</li>
+                                <li>✓ Design system is published as a library</li>
+                                <li>✓ Assets are properly exported with correct specifications</li>
+                                <li>✓ Inspect panel contains all necessary information</li>
+                                <li>✓ Prototypes are linked for interactive reference</li>
+                            </ul>
+                            <ul>
+                                <li>✓ Design specifications are documented</li>
+                                <li>✓ Responsive behaviors are defined</li>
+                                <li>✓ Accessibility requirements are specified</li>
+                                <li>✓ Animation specifications are provided</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h3>Design-Dev Collaboration Tips:</h3>
+                            <ul>
+                                <li>Establish clear communication channels</li>
+                                <li>Create shared documentation</li>
+                                <li>Conduct regular design-dev syncs</li>
+                                <li>Implement feedback loops</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Practice Exercise</h2>
+                    <p>Create a comprehensive design system for a web application:</p>
+                    <ul>
+                        <li>Define a color system with light and dark modes using variables</li>
+                        <li>Create a complete typography system with styles</li>
+                        <li>Build a component library with nested components</li>
+                        <li>Implement advanced prototyping with conditional navigation</li>
+                        <li>Document your design system with clear guidelines</li>
+                    </ul>
+                    <p>Publish your design system as a library and create a sample application using your system.</p>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Certifications & Courses</h2>
+                    <p>Enhance your Figma skills with recognized certifications:</p>
+                    
+                    <div class="certification-card">
+                        <h3>Figma Certified Professional</h3>
+                        <p>Official certification from Figma covering all aspects of the tool.</p>
+                        <p><strong>Provider:</strong> Figma Inc.</p>
+                        <p><strong>Duration:</strong> Self-paced, approximately 20 hours</p>
+                        <p><a href="https://www.figma.com/certification" target="_blank">Learn more →</a></p>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h3>Advanced UI/UX Design with Figma</h3>
+                        <p>Specialization covering advanced design systems and prototyping.</p>
+                        <p><strong>Provider:</strong> Coursera</p>
+                        <p><strong>Duration:</strong> 4 months, 5 hours/week</p>
+                        <p><a href="https://www.coursera.org/specializations/intermediatetoadvancedprofessionalfigma-ui-uxdesign" target="_blank">Learn more →</a></p>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h3>Figma for Design Systems</h3>
+                        <p>Master design systems and advanced collaboration techniques.</p>
+                        <p><strong>Provider:</strong> Designlab</p>
+                        <p><strong>Duration:</strong> 4 weeks, instructor-led</p>
+                        <p><a href="https://designlab.com/advanced/figma-course" target="_blank">Learn more →</a></p>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h3>Figma Plugin Development</h3>
+                        <p>Learn to create custom plugins and widgets for Figma.</p>
+                        <p><strong>Provider:</strong> Udemy</p>
+                        <p><strong>Duration:</strong> 6 weeks, self-paced</p>
+                        <p><a href="https://www.udemy.com/course/figma-plugin-development/" target="_blank">Learn more →</a></p>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <h3>Certification Preparation Tips</h3>
+                        <ul>
+                            <li>Review official Figma documentation thoroughly</li>
+                            <li>Practice with real-world design projects</li>
+                            <li>Join Figma community forums for study groups</li>
+                            <li>Take practice exams to identify knowledge gaps</li>
+                            <li>Create a portfolio showcasing your Figma skills</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Important Resources & Links</h2>
+                    
+                    <h3>Official Documentation</h3>
+                    <ul>
+                        <li><a href="https://help.figma.com/" target="_blank">Figma Help Center</a> - Comprehensive official documentation</li>
+                        <li><a href="https://developers.figma.com/" target="_blank">Figma Developer Docs</a> - API and plugin development resources</li>
+                        <li><a href="https://www.figma.com/community" target="_blank">Figma Community</a> - Thousands of free resources and templates</li>
+                    </ul>
+                    
+                    <h3>Design Systems Examples</h3>
+                    <ul>
+                        <li><a href="https://www.figma.com/community/file/886579141812883685" target="_blank">Material Design System</a> - Google's design system implementation</li>
+                        <li><a href="https://www.figma.com/community/file/1159947901245562265" target="_blank">Fluent Design System</a> - Microsoft's design system</li>
+                        <li><a href="https://www.figma.com/community/file/1159950792590514964" target="_blank">Human Interface Guidelines</a> - Apple's design guidelines</li>
+                    </ul>
+                    
+                    <h3>Advanced Plugins</h3>
+                    <ul>
+                        <li><a href="https://www.figma.com/community/plugin/731627216655469013/Automate" target="_blank">Automate</a> - Automate repetitive design tasks</li>
+                        <li><a href="https://www.figma.com/community/plugin/748533339900865323/Content-reel" target="_blank">Content Reel</a> - Generate realistic placeholder content</li>
+                        <li><a href="https://www.figma.com/community/plugin/736000329012645099/Translator" target="_blank">Translator</a> - Translate text layers to other languages</li>
+                    </ul>
+                    
+                    <div class="interactive-element">
+                        <h3>Community Resources</h3>
+                        <ul>
+                            <li><a href="https://forum.figma.com/" target="_blank">Figma Forum</a> - Official community discussions</li>
+                            <li><a href="https://twitter.com/figma" target="_blank">Figma Twitter</a> - Latest updates and news</li>
+                            <li><a href="https://www.youtube.com/@Figma" target="_blank">Figma YouTube Channel</a> - Official tutorials and updates</li>
+                            <li><a href="https://www.linkedin.com/company/figma" target="_blank">Figma LinkedIn</a> - Professional networking</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Learning Timeline</h2>
+                    <p>Here's a suggested timeline for mastering Figma development, from beginner to expert:</p>
+                    
+                    <div class="interactive-element">
+                        <h3>Beginner Phase (1-2 weeks)</h3>
+                        <ul>
+                            <li>Week 1: Interface navigation, basic tools, and simple designs</li>
+                            <li>Week 2: Frames, basic shapes, text tools, and simple layouts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="interactive-element">
+                        <h3>Intermediate Phase (3-6 weeks)</h3>
+                        <ul>
+                            <li>Week 3-4: Components, instances, and Auto Layout</li>
+                            <li>Week 5-6: Variants, basic prototyping, and styles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="interactive-element">
+                        <h3>Advanced Phase (7-12 weeks)</h3>
+                        <ul>
+                            <li>Week 7-8: Design systems and variables</li>
+                            <li>Week 9-10: Advanced prototyping and conditional logic</li>
+                            <li>Week 11-12: Collaboration features and developer handoff</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="interactive-element">
+                        <h3>Expert Phase (13+ weeks)</h3>
+                        <ul>
+                            <li>Plugin development and API integration</li>
+                            <li>Complex design systems for enterprise applications</li>
+                            <li>Mentoring others and contributing to the Figma community</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><strong>Note:</strong> This timeline is flexible and can be adjusted based on your prior design experience and the time you can dedicate each week. Some designers may progress faster, while others may need more time to master each phase.</p>
+                    </div>
+                </div>
+                
+                <div class="content-card">
+                    <h2>Open Source Projects</h2>
+                    <p>Contributing to open source projects is a great way to enhance your Figma skills while giving back to the community. Here are some notable open source design projects:</p>
+                    
+                    <div class="certification-card">
+                        <h3>Open Source Design Systems</h3>
+                        <p>Explore and contribute to open source design systems available on Figma Community.</p>
+                        <ul>
+                            <li><a href="https://www.figma.com/community/file/886579141812883685" target="_blank">Material Design System</a> - Google's design system with open contributions</li>
+                            <li><a href="https://www.figma.com/community/file/1159947901245562265" target="_blank">Fluent Design System</a> - Microsoft's open design system</li>
+                            <li><a href="https://www.figma.com/community/file/1159950792590514964" target="_blank">Human Interface Guidelines</a> - Apple's design guidelines</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h3>Figma Plugin Open Source Projects</h3>
+                        <p>Contribute to or learn from open source Figma plugins:</p>
+                        <ul>
+                            <li><a href="https://github.com/figma/plugin-samples" target="_blank">Figma Plugin Samples</a> - Official sample plugins from Figma</li>
+                            <li><a href="https://github.com/thomas-lowry/figma-plugin-boilerplate" target="_blank">Plugin Boilerplate</a> - Starter template for Figma plugins</li>
+                            <li><a href="https://github.com/figma/widget-samples" target="_blank">Widget Samples</a> - Sample widgets from Figma</li>
+                            <li><a href="https://github.com/figma/figma-api" target="_blank">Figma API</a> - Official Figma API documentation and examples</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="certification-card">
+                        <h3>Community Templates & Resources</h3>
+                        <p>Explore and contribute to community-created templates:</p>
+                        <ul>
+                            <li><a href="https://www.figma.com/community" target="_blank">Figma Community</a> - Thousands of free templates and resources</li>
+                            <li><a href="https://github.com/alexpaul/figma-design-systems" target="_blank">Figma Design Systems</a> - Collection of open source design systems</li>
+                            <li><a href="https://github.com/figma/community" target="_blank">Figma Community Resources</a> - Official community resources</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <h3>How to Contribute to Open Source Figma Projects</h3>
+                        <ol>
+                            <li><strong>Find a Project:</strong> Browse Figma Community or GitHub for projects that interest you</li>
+                            <li><strong>Understand the Project:</strong> Review documentation and existing components</li>
+                            <li><strong>Start Small:</strong> Begin with bug fixes or small enhancements</li>
+                            <li><strong>Follow Guidelines:</strong> Adhere to the project's contribution guidelines</li>
+                            <li><strong>Submit Pull Requests:</strong> Propose your changes with clear explanations</li>
+                            <li><strong>Engage with Community:</strong> Participate in discussions and feedback</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Figma Developer Guide &copy; 2023 | Learn Figma from basics to advanced techniques</p>
+            <p>This educational resource is designed to help you master Figma development skills through structured learning paths and hands-on practice.</p>
+            <p>Created by Anand Binu Arjun</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Mermaid charts
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof mermaid !== 'undefined') {
+                mermaid.initialize({
+                    startOnLoad: true,
+                    theme: 'default',
+                    flowchart: {
+                        useMaxWidth: true
+                    }
+                });
+                
+                // Re-render charts when cards are animated into view
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            mermaid.run();
+                        }
+                    });
+                }, { threshold: 0.1 });
+                
+                document.querySelectorAll('.flowchart').forEach(chart => {
+                    observer.observe(chart);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

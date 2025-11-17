@@ -1,0 +1,37 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Toolbar -->
+  <rect x="10" y="10" width="380" height="40" rx="4" fill="#4299e1" opacity="0.9"/>
+  <circle cx="30" cy="30" r="8" fill="white" opacity="0.8"/>
+  <circle cx="55" cy="30" r="8" fill="white" opacity="0.8"/>
+  <circle cx="80" cy="30" r="8" fill="white" opacity="0.8"/>
+  
+  <!-- Canvas area -->
+  <rect x="70" y="70" width="260" height="180" rx="4" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Sample design elements -->
+  <rect x="90" y="90" width="100" height="40" rx="4" fill="#4299e1" opacity="0.7"/>
+  <text x="140" y="115" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Button</text>
+  
+  <rect x="200" y="150" width="100" height="60" rx="4" fill="#edf2f7" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="250" cy="180" r="15" fill="#4299e1" opacity="0.5"/>
+  
+  <!-- Layers panel -->
+  <rect x="340" y="70" width="50" height="180" rx="4" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="345" y="80" width="40" height="15" rx="2" fill="#cbd5e0"/>
+  <rect x="345" y="100" width="40" height="15" rx="2" fill="#cbd5e0"/>
+  <rect x="345" y="120" width="40" height="15" rx="2" fill="#4299e1" opacity="0.7"/>
+  
+  <!-- Properties panel -->
+  <rect x="10" y="70" width="50" height="180" rx="4" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="15" y="80" width="40" height="8" rx="1" fill="#cbd5e0"/>
+  <rect x="15" y="95" width="40" height="8" rx="1" fill="#cbd5e0"/>
+  <rect x="15" y="110" width="40" height="8" rx="1" fill="#cbd5e0"/>
+  
+  <!-- Labels -->
+  <text x="200" y="60" font-family="Arial" font-size="14" fill="#4a5568" text-anchor="middle">Canvas</text>
+  <text x="35" y="60" font-family="Arial" font-size="10" fill="#4a5568" text-anchor="middle">Properties</text>
+  <text x="365" y="60" font-family="Arial" font-size="10" fill="#4a5568" text-anchor="middle">Layers</text>
+  <text x="200" y="20" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Figma Toolbar</text>
+</svg>

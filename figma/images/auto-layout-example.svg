@@ -1,0 +1,28 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Auto Layout Container -->
+  <rect x="80" y="80" width="240" height="140" rx="8" fill="white" stroke="#4299e1" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Content items -->
+  <rect x="100" y="100" width="200" height="30" rx="4" fill="#4299e1" opacity="0.7"/>
+  <rect x="100" y="140" width="200" height="30" rx="4" fill="#4299e1" opacity="0.7"/>
+  <rect x="100" y="180" width="200" height="30" rx="4" fill="#4299e1" opacity="0.7"/>
+  
+  <!-- Labels -->
+  <text x="200" y="50" font-family="Arial" font-size="16" fill="#2d3748" text-anchor="middle">Auto Layout Example</text>
+  <text x="200" y="70" font-family="Arial" font-size="12" fill="#4a5568" text-anchor="middle">Container automatically adjusts to content</text>
+  <text x="200" y="95" font-family="Arial" font-size="10" fill="#4a5568" text-anchor="middle">Content items are evenly spaced</text>
+  
+  <!-- Padding indicators -->
+  <line x1="80" y1="100" x2="100" y2="100" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="300" y1="100" x2="320" y2="100" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="90" y="95" font-family="Arial" font-size="8" fill="#4a5568" text-anchor="middle">P</text>
+  <text x="310" y="95" font-family="Arial" font-size="8" fill="#4a5568" text-anchor="middle">P</text>
+  
+  <!-- Spacing indicators -->
+  <line x1="200" y1="130" x2="200" y2="140" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
+  <line x1="200" y1="170" x2="200" y2="180" stroke="#4a5568" stroke-width="1" stroke-dasharray="2,2"/>
+  <text x="205" y="138" font-family="Arial" font-size="8" fill="#4a5568">S</text>
+  <text x="205" y="178" font-family="Arial" font-size="8" fill="#4a5568">S</text>
+</svg>

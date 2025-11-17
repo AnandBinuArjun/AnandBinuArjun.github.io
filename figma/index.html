@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Developer Guide: From Basics to Advanced</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="progress-indicator"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+            <div class="logo">FigmaDev Guide</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#basics">Basics</a></li>
+                <li><a href="#intermediate">Intermediate</a></li>
+                <li><a href="#advanced">Advanced</a></li>
+                <li><a href="#plugins">Plugins</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Become a Figma Development Expert</h1>
+                <p>Comprehensive guide from basics to advanced Figma development techniques</p>
+                <div class="figure-container">
+                    <img src="images/figma-interface.svg" alt="Figma Interface" style="max-width: 300px; margin: 20px auto; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
+                </div>
+                <a href="#basics" class="cta-button">Start Learning</a>
+                <a href="#timeline" class="cta-button secondary">View Timeline</a>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="container">
+                <h2>Why Learn Figma?</h2>
+                <p>Figma is the industry-standard design tool used by top companies worldwide. Mastering Figma opens doors to exciting career opportunities in UI/UX design and development.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Industry Standard Tool</h3>
+                        <p>Figma is the leading design tool used by top companies like Uber, Airbnb, and Microsoft. Mastering Figma opens doors to exciting career opportunities.</p>
+                        <div class="figure-container">
+                            <img src="images/figma-interface.svg" alt="Figma Interface Overview" class="educational-diagram">
+                            <div class="figure-caption">Figma's collaborative interface used by design teams worldwide</div>
+                        </div>
+                        <div class="interactive-element">
+                            <h4>Market Demand</h4>
+                            <p>According to industry reports, over 70% of UX/UI designers use Figma as their primary design tool, making it a critical skill for design professionals.</p>
+                            <ul>
+                                <li>High demand in job market</li>
+                                <li>Competitive salary potential</li>
+                                <li>Remote work opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Real-time Collaboration</h3>
+                        <p>Unlike traditional design tools, Figma enables multiple designers to work simultaneously on the same project, streamlining team workflows.</p>
+                        <div class="interactive-element">
+                            <h4>Collaboration Features</h4>
+                            <ul>
+                                <li>Live cursor tracking</li>
+                                <li>Commenting and feedback</li>
+                                <li>Version history</li>
+                                <li>@mentions for team communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Developer-Friendly</h3>
+                        <p>Figma bridges the gap between design and development with robust inspect tools, code exports, and plugin capabilities.</p>
+                        <div class="interactive-element">
+                            <h4>Developer Tools</h4>
+                            <ul>
+                                <li>CSS and React code generation</li>
+                                <li>Asset export at multiple resolutions</li>
+                                <li>Design token integration</li>
+                                <li>Handoff documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Extensible with Plugins</h3>
+                        <p>Extend Figma's functionality with thousands of plugins or create your own to automate repetitive tasks and customize your workflow.</p>
+                        <div class="interactive-element">
+                            <h4>Popular Plugin Categories</h4>
+                            <ul>
+                                <li>Automation tools</li>
+                                <li>Content generation</li>
+                                <li>Accessibility checking</li>
+                                <li>Data population</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="basics" class="content-section">
+            <div class="container">
+                <h2>Level 1: Figma Basics</h2>
+                <div class="reading-time">Estimated reading time: 25 minutes</div>
+                <p>Start your journey with the fundamentals of Figma interface and essential tools.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>What is Figma?</h3>
+                        <p>Figma is a cloud-based design tool that allows teams to collaborate in real-time on UI/UX projects. Unlike traditional design tools, Figma operates entirely in the browser, making it accessible from anywhere.</p>
+                        <div class="highlight-box">
+                            <h4>Key Advantages</h4>
+                            <ul>
+                                <li>No software installation required</li>
+                                <li>Automatic saving and version control</li>
+                                <li>Cross-platform compatibility</li>
+                                <li>Real-time collaboration features</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Setting Up Your Account</h3>
+                        <p>Create a free Figma account at <a href="https://www.figma.com" target="_blank">figma.com</a>. The free tier includes unlimited personal files, up to 3 editors, and unlimited viewers.</p>
+                        <div class="interactive-element">
+                            <h4>Account Plans</h4>
+                            <ul>
+                                <li><strong>Free:</strong> Unlimited personal files, 3 editors</li>
+                                <li><strong>Professional:</strong> $12/editor/month, advanced features</li>
+                                <li><strong>Organization:</strong> $45/editor/month, enterprise features</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Interface Overview</h3>
+                        <p>Figma's interface consists of the toolbar, layers panel, properties panel, and canvas. Familiarize yourself with these core areas to navigate efficiently.</p>
+                        <div class="interactive-element">
+                            <h4>Interface Components</h4>
+                            <ul>
+                                <li><strong>Toolbar:</strong> Design tools and actions</li>
+                                <li><strong>Canvas:</strong> Main design area</li>
+                                <li><strong>Layers Panel:</strong> Hierarchy of design elements</li>
+                                <li><strong>Properties Panel:</strong> Settings for selected elements</li>
+                                <li><strong>Pages Panel:</strong> File organization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Basic Tools</h3>
+                        <p>Master the fundamental tools: Frame, Shape, Text, Pen, and Move tools. These form the foundation of all your designs in Figma.</p>
+                        <div class="highlight-box">
+                            <h4>Essential Shortcuts</h4>
+                            <ul>
+                                <li><strong>F:</strong> Frame tool</li>
+                                <li><strong>R:</strong> Rectangle tool</li>
+                                <li><strong>T:</strong> Text tool</li>
+                                <li><strong>V:</strong> Move tool</li>
+                                <li><strong>P:</strong> Pen tool</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-button">
+                    <a href="basics.html" class="cta-button">Explore Basics</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="intermediate" class="content-section">
+            <div class="container">
+                <h2>Level 2: Intermediate Skills</h2>
+                <div class="reading-time">Estimated reading time: 35 minutes</div>
+                <p>Build on your foundation with powerful features that enhance your design workflow.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Components & Instances</h3>
+                        <p>Learn to create reusable components that can be used throughout your designs. Understand the difference between main components and instances.</p>
+                        <div class="figure-container">
+                            <img src="images/components-example.svg" alt="Figma Components System" class="educational-diagram">
+                            <div class="figure-caption">Component system with one main component and multiple instances</div>
+                        </div>
+                        <div class="interactive-element">
+                            <h4>Component Benefits</h4>
+                            <ul>
+                                <li>Consistency across designs</li>
+                                <li>Easier updates and maintenance</li>
+                                <li>Efficient design workflow</li>
+                                <li>Shared libraries for teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Auto Layout</h3>
+                        <p>Auto Layout allows you to create responsive designs that adapt to content. Perfect for buttons, cards, and navigation elements.</p>
+                        <div class="figure-container">
+                            <img src="images/auto-layout-example.svg" alt="Figma Auto Layout" class="educational-diagram">
+                            <div class="figure-caption">Auto Layout container with evenly spaced content items</div>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Auto Layout Features</h4>
+                            <ul>
+                                <li>Dynamic resizing based on content</li>
+                                <li>Consistent spacing and alignment</li>
+                                <li>Nested layouts for complex designs</li>
+                                <li>Responsive design capabilities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Variants</h3>
+                        <p>Create component variants to manage different states of the same element (e.g., button states: default, hover, active).</p>
+                        <div class="interactive-element">
+                            <h4>Variant Properties</h4>
+                            <ul>
+                                <li>Status (default, hover, active, disabled)</li>
+                                <li>Size (small, medium, large)</li>
+                                <li>Type (primary, secondary, tertiary)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Prototyping</h3>
+                        <p>Bring your designs to life with interactive prototypes. Connect frames to simulate user flows and interactions.</p>
+                        <div class="figure-container">
+                            <img src="images/prototyping-example.svg" alt="Figma Prototyping" class="educational-diagram">
+                            <div class="figure-caption">Prototyping with connections between frames</div>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Prototyping Tools</h4>
+                            <ul>
+                                <li>Connection lines between frames</li>
+                                <li>Smart animate for smooth transitions</li>
+                                <li>Overlay and modal interactions</li>
+                                <li>Hotspot areas for complex interactions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-button">
+                    <a href="intermediate.html" class="cta-button">Explore Intermediate</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="advanced" class="content-section">
+            <div class="container">
+                <h2>Level 3: Advanced Techniques</h2>
+                <div class="reading-time">Estimated reading time: 45 minutes</div>
+                <p>Master advanced features that distinguish expert Figma users from beginners.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Design Systems</h3>
+                        <p>Create comprehensive design systems with shared libraries, consistent styles, and documentation.</p>
+                        <div class="interactive-element">
+                            <h4>Design System Components</h4>
+                            <ul>
+                                <li>Color palettes and styles</li>
+                                <li>Typography scales and text styles</li>
+                                <li>Component libraries</li>
+                                <li>Design documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Advanced Prototyping</h3>
+                        <p>Implement complex interactions, animations, and micro-interactions to create immersive prototypes.</p>
+                        <div class="highlight-box">
+                            <h4>Advanced Features</h4>
+                            <ul>
+                                <li>Smart animate transitions</li>
+                                <li>Variable interpolation</li>
+                                <li>Keyboard interactions</li>
+                                <li>Scroll-driven animations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Developer Handoff</h3>
+                        <p>Streamline the design-to-development process with precise specifications and asset exports.</p>
+                        <div class="interactive-element">
+                            <h4>Handoff Tools</h4>
+                            <ul>
+                                <li>Inspect panel for measurements</li>
+                                <li>Code snippets for developers</li>
+                                <li>Asset export at multiple resolutions</li>
+                                <li>Design token generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Collaboration Best Practices</h3>
+                        <p>Implement workflows and practices that maximize team productivity and design consistency.</p>
+                        <div class="highlight-box">
+                            <h4>Best Practices</h4>
+                            <ul>
+                                <li>File organization and naming conventions</li>
+                                <li>Commenting and feedback workflows</li>
+                                <li>Version control and branching</li>
+                                <li>Team libraries and shared resources</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-button">
+                    <a href="advanced.html" class="cta-button">Explore Advanced</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="plugins" class="content-section">
+            <div class="container">
+                <h2>Plugins & Extensions</h2>
+                <div class="reading-time">Estimated reading time: 30 minutes</div>
+                <p>Extend Figma's functionality with powerful plugins that automate tasks and enhance your workflow.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Popular Plugins</h3>
+                        <p>Discover plugins that can significantly speed up your design process and add new capabilities.</p>
+                        <div class="interactive-element">
+                            <h4>Must-Have Plugins</h4>
+                            <ul>
+                                <li><strong>Content Reel:</strong> Populate designs with realistic content</li>
+                                <li><strong>Stark:</strong> Accessibility and contrast checking</li>
+                                <li><strong>Zeplin:</strong> Design handoff and collaboration</li>
+                                <li><strong>Iconify:</strong> Thousands of icons in one plugin</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Automation Tools</h3>
+                        <p>Automate repetitive tasks to save time and reduce errors in your design workflow.</p>
+                        <div class="highlight-box">
+                            <h4>Automation Plugins</h4>
+                            <ul>
+                                <li>Batch styling and renaming</li>
+                                <li>Grid and layout generation</li>
+                                <li>Export and asset optimization</li>
+                                <li>Data population for realistic mockups</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Development Plugins</h3>
+                        <p>Bridging the gap between design and development with code generation and inspection tools.</p>
+                        <div class="interactive-element">
+                            <h4>Developer-Focused Plugins</h4>
+                            <ul>
+                                <li>CSS and React code generation</li>
+                                <li>Design token exporters</li>
+                                <li>Measurement and spacing tools</li>
+                                <li>Asset optimization for web</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Creating Your Own Plugins</h3>
+                        <p>Learn to build custom plugins to solve specific workflow challenges in your projects.</p>
+                        <div class="highlight-box">
+                            <h4>Plugin Development</h4>
+                            <ul>
+                                <li>JavaScript and HTML for plugin UI</li>
+                                <li>Figma Plugin API documentation</li>
+                                <li>Testing and debugging workflows</li>
+                                <li>Publishing to Figma Community</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-button">
+                    <a href="plugins.html" class="cta-button">Explore Plugins</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="content-section">
+            <div class="container">
+                <h2>Learning Resources</h2>
+                <div class="reading-time">Estimated reading time: 20 minutes</div>
+                <p>Continue your Figma journey with these carefully curated resources and learning paths.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Official Resources</h3>
+                        <p>Start with Figma's official learning materials and documentation.</p>
+                        <div class="interactive-element">
+                            <h4>Figma Resources</h4>
+                            <ul>
+                                <li><a href="https://help.figma.com/" target="_blank">Figma Help Center</a></li>
+                                <li><a href="https://www.figma.com/community" target="_blank">Figma Community</a></li>
+                                <li><a href="https://www.figma.com/best-practices/" target="_blank">Figma Best Practices</a></li>
+                                <li><a href="https://youtube.com/figma" target="_blank">Figma YouTube Channel</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Online Courses</h3>
+                        <p>Structured learning paths to master Figma at your own pace.</p>
+                        <div class="highlight-box">
+                            <h4>Recommended Courses</h4>
+                            <ul>
+                                <li>Figma for UI Design (Udemy)</li>
+                                <li>Advanced Figma Techniques (Skillshare)</li>
+                                <li>Figma Prototyping Mastery (Coursera)</li>
+                                <li>Design Systems with Figma (LinkedIn Learning)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Community & Forums</h3>
+                        <p>Connect with other Figma users and get help from the community.</p>
+                        <div class="interactive-element">
+                            <h4>Community Resources</h4>
+                            <ul>
+                                <li><a href="https://twitter.com/figma" target="_blank">Figma on Twitter</a></li>
+                                <li><a href="https://discord.gg/figma" target="_blank">Figma Discord</a></li>
+                                <li><a href="https://www.reddit.com/r/Figma/" target="_blank">Figma Subreddit</a></li>
+                                <li>Figma Meetups (local communities)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <h3>Practice Projects</h3>
+                        <p>Apply your skills with real-world projects and design challenges.</p>
+                        <div class="highlight-box">
+                            <h4>Project Ideas</h4>
+                            <ul>
+                                <li>Redesign a popular app interface</li>
+                                <li>Create a design system for a startup</li>
+                                <li>Build a mobile app prototype</li>
+                                <li>Design a dashboard for analytics data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-button">
+                    <a href="resources.html" class="cta-button">Explore Resources</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="timeline" class="content-section">
+            <div class="container">
+                <h2>Learning Timeline: From Basics to Advanced</h2>
+                <div class="reading-time">Estimated reading time: 25 minutes</div>
+                <p>Follow this structured timeline to master Figma development skills progressively. This roadmap is designed to take you from complete beginner to Figma expert over several months of consistent practice.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3>Week 1-2: Figma Fundamentals</h3>
+                        <div class="interactive-element">
+                            <h4>Goals:</h4>
+                            <ul>
+                                <li>Set up your Figma account and familiarize yourself with the interface</li>
+                                <li>Master basic tools: Frame, Shape, Text, and Move tools</li>
+                                <li>Create your first simple design project</li>
+                                <li>Learn essential keyboard shortcuts</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Practice Projects:</h4>
+                            <ul>
+                                <li>Create a simple business card design</li>
+                                <li>Design a basic mobile app screen</li>
+                                <li>Recreate a simple website layout</li>
+                            </ul>
+                        </div>
+                        <p><strong>Time Commitment:</strong> 5-7 hours per week</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Week 3-4: Intermediate Skills</h3>
+                        <div class="interactive-element">
+                            <h4>Goals:</h4>
+                            <ul>
+                                <li>Understand components and instances</li>
+                                <li>Master Auto Layout for responsive designs</li>
+                                <li>Learn to organize files with pages and frames</li>
+                                <li>Start creating reusable design elements</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Practice Projects:</h4>
+                            <ul>
+                                <li>Build a component library for a mobile app</li>
+                                <li>Create a responsive card layout with Auto Layout</li>
+                                <li>Design a complete login flow with multiple screens</li>
+                            </ul>
+                        </div>
+                        <p><strong>Time Commitment:</strong> 7-10 hours per week</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Week 5-6: Prototyping & Collaboration</h3>
+                        <div class="interactive-element">
+                            <h4>Goals:</h4>
+                            <ul>
+                                <li>Create interactive prototypes with transitions</li>
+                                <li>Use Smart Animate for smooth animations</li>
+                                <li>Collaborate with others using commenting and sharing</li>
+                                <li>Implement design version control practices</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Practice Projects:</h4>
+                            <ul>
+                                <li>Prototype a complete mobile app with multiple flows</li>
+                                <li>Create an animated onboarding experience</li>
+                                <li>Collaborate on a team project with feedback cycles</li>
+                            </ul>
+                        </div>
+                        <p><strong>Time Commitment:</strong> 8-12 hours per week</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Week 7-8: Advanced Techniques</h3>
+                        <div class="interactive-element">
+                            <h4>Goals:</h4>
+                            <ul>
+                                <li>Master component variants for complex UI states</li>
+                                <li>Implement advanced prototyping with conditional logic</li>
+                                <li>Create comprehensive design systems</li>
+                                <li>Use variables for dynamic theming</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Practice Projects:</h4>
+                            <ul>
+                                <li>Develop a complete design system with documentation</li>
+                                <li>Create a themeable interface with light/dark modes</li>
+                                <li>Build a complex dashboard with data visualization</li>
+                            </ul>
+                        </div>
+                        <p><strong>Time Commitment:</strong> 10-15 hours per week</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Month 3: Plugin Development</h3>
+                        <div class="interactive-element">
+                            <h4>Goals:</h4>
+                            <ul>
+                                <li>Understand the Figma Plugin API</li>
+                                <li>Create custom plugins to automate workflows</li>
+                                <li>Learn to publish plugins to the Figma Community</li>
+                                <li>Integrate external tools with Figma</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Practice Projects:</h4>
+                            <ul>
+                                <li>Build a plugin that generates design tokens</li>
+                                <li>Create an automation tool for common tasks</li>
+                                <li>Develop a plugin that exports assets in multiple formats</li>
+                            </ul>
+                        </div>
+                        <p><strong>Time Commitment:</strong> 15-20 hours per week</p>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h3>Month 4+: Mastery & Specialization</h3>
+                        <div class="interactive-element">
+                            <h4>Goals:</h4>
+                            <ul>
+                                <li>Specialize in specific areas (design systems, prototyping, etc.)</li>
+                                <li>Contribute to open-source Figma projects</li>
+                                <li>Mentor other Figma learners</li>
+                                <li>Stay current with new Figma features</li>
+                            </ul>
+                        </div>
+                        <div class="highlight-box">
+                            <h4>Practice Projects:</h4>
+                            <ul>
+                                <li>Lead a design system implementation for a real project</li>
+                                <li>Create advanced interactive prototypes for complex applications</li>
+                                <li>Publish multiple plugins to the Figma Community</li>
+                                <li>Present at design/development meetups or conferences</li>
+                            </ul>
+                        </div>
+                        <p><strong>Time Commitment:</strong> 10-15 hours per week (ongoing)</p>
+                    </div>
+                </div>
+                
+                <div class="center-button">
+                    <a href="timeline.html" class="cta-button">View Detailed Timeline</a>
+                    <a href="#home" class="cta-button secondary">Back to Top</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Figma Developer Guide &copy; 2023 | Learn Figma from basics to advanced techniques</p>
+            <p>This educational resource is designed to help you master Figma development skills through structured learning paths and hands-on practice.</p>
+            <p>Created by Anand Binu Arjun</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Figma - Figma Developer Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="progress-indicator"></div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav>
+            <div class="logo">FigmaDev Guide</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="basics.html">Basics</a></li>
+                <li><a href="intermediate.html" class="active">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+                <li><a href="plugins.html">Plugins</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="content-section">
+            <div class="container">
+                <h1>Intermediate Figma Skills</h1>
+                <div class="reading-time">Estimated reading time: 20 minutes</div>
+                <p>In this section, we'll dive deeper into Figma's powerful features that will help you create more efficient and consistent designs. These skills are essential for any serious Figma user.</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h2>Components & Instances</h2>
+                        <p>Components are reusable design elements that ensure consistency across your projects. When you create a component, you're creating a master template that can be used multiple times throughout your design.</p>
+                        <div class="figure-container">
+                            <img src="images/components-example.svg" alt="Figma Components and Instances" class="educational-diagram">
+                            <div class="figure-caption">Component system showing one main component and multiple instances</div>
+                        </div>
+                        <div class="interactive-element">
+                            <h3>Creating Components</h3>
+                            <ol>
+                                <li>Select the element you want to turn into a component</li>
+                                <li>Right-click and select "Create Component" or use Ctrl+Alt+K (Cmd+Option+K on Mac)</li>
+                                <li>Your element becomes the main component</li>
+                            </ol>
+                            <ul>
+                                <li>Name your components descriptively</li>
+                                <li>Organize components in folders for better management</li>
+                                <li>Use consistent naming conventions across your team</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Using Instances</h3>
+                            <p>Instances are copies of components. When you edit the main component, all instances update automatically.</p>
+                            <ul>
+                                <li>To create an instance, drag the component from the Assets panel to your canvas</li>
+                                <li>You can override properties of individual instances without affecting the main component</li>
+                                <li>Instance swapping allows you to replace one component with another</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <h4>Instance Benefits:</h4>
+                                <ul>
+                                    <li>Efficient design updates</li>
+                                    <li>Consistent design language</li>
+                                    <li>Reduced file size</li>
+                                    <li>Easier maintenance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Auto Layout</h2>
+                        <p>Auto Layout is one of Figma's most powerful features. It allows you to create responsive designs that automatically adjust to their content.</p>
+                        <div class="figure-container">
+                            <img src="images/auto-layout-example.svg" alt="Figma Auto Layout" class="educational-diagram">
+                            <div class="figure-caption">Auto Layout container with evenly spaced content items</div>
+                        </div>
+                        <div class="interactive-element">
+                            <h3>Benefits of Auto Layout</h3>
+                            <ul>
+                                <li>Automatically resize containers based on content</li>
+                                <li>Easily align and distribute elements</li>
+                                <li>Create responsive components</li>
+                                <li>Simplify complex layouts</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <h4>When to Use Auto Layout:</h4>
+                                <ul>
+                                    <li>Button components with text and icons</li>
+                                    <li>Navigation bars with multiple items</li>
+                                    <li>Cards with varying content</li>
+                                    <li>Form layouts with labels and inputs</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Applying Auto Layout</h3>
+                            <ol>
+                                <li>Select the elements you want to group</li>
+                                <li>Click the Auto Layout button in the toolbar or use Shift+A</li>
+                                <li>Adjust padding, spacing, and alignment in the Properties panel</li>
+                            </ol>
+                            <ul>
+                                <li>Set primary and counter axis alignment</li>
+                                <li>Adjust padding for internal spacing</li>
+                                <li>Control item spacing with distribution settings</li>
+                                <li>Use fills and strokes on Auto Layout frames</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Component Variants</h2>
+                        <p>Variants allow you to create multiple versions of a component within a single component set. This is perfect for elements like buttons that have different states (default, hover, pressed) or properties (size, color).</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Creating Variants</h3>
+                            <ol>
+                                <li>Create multiple components that represent different versions of the same element</li>
+                                <li>Select all components and right-click</li>
+                                <li>Choose "Combine as Variants"</li>
+                                <li>Name your variant properties in the Properties panel</li>
+                            </ol>
+                            <ul>
+                                <li>Ensure all variants have the same layer structure</li>
+                                <li>Use consistent naming for properties and values</li>
+                                <li>Organize properties logically (State, Size, Type)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Using Variants</h3>
+                            <p>Switch between variants using the Properties panel. You can change properties like state, size, and color without creating separate components.</p>
+                            <ul>
+                                <li>Change properties in the Properties panel</li>
+                                <li>Override nested elements within variants</li>
+                                <li>Instance swap between different variant sets</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <h4>Variant Best Practices:</h4>
+                                <ul>
+                                    <li>Limit the number of properties per variant set</li>
+                                    <li>Use boolean properties for on/off states</li>
+                                    <li>Maintain visual consistency across variants</li>
+                                    <li>Document complex variant structures</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Basic Prototyping</h2>
+                        <p>Prototyping brings your static designs to life by connecting screens and adding interactions.</p>
+                        <div class="figure-container">
+                            <img src="images/prototyping-example.svg" alt="Figma Prototyping" class="educational-diagram">
+                            <div class="figure-caption">Interactive prototype with screen transitions</div>
+                        </div>
+                        <div class="interactive-element">
+                            <h3>Creating Connections</h3>
+                            <ol>
+                                <li>Switch to Prototype mode using the tab at the top of the canvas</li>
+                                <li>Select an element you want to make interactive</li>
+                                <li>Drag the small circle next to the selection outline to another frame</li>
+                                <li>Choose an animation type in the Properties panel</li>
+                            </ol>
+                            <ul>
+                                <li>Use the Properties panel to set transition details</li>
+                                <li>Set delays and durations for animations</li>
+                                <li>Choose appropriate easing functions</li>
+                                <li>Test connections as you create them</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Previewing Prototypes</h3>
+                            <p>Click the Preview button in the top right corner or use Ctrl+Alt+P (Cmd+Option+P on Mac) to test your prototype in a browser-like environment.</p>
+                            <ul>
+                                <li>Preview in browser for accurate device simulation</li>
+                                <li>Use the device toolbar to test different screen sizes</li>
+                                <li>Share preview links with stakeholders</li>
+                                <li>Record user testing sessions</li>
+                            </ul>
+                            <div class="highlight-box">
+                                <h4>Prototyping Tips:</h4>
+                                <ul>
+                                    <li>Start with basic navigation flows</li>
+                                    <li>Add micro-interactions for better engagement</li>
+                                    <li>Test on actual devices when possible</li>
+                                    <li>Gather feedback early and often</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Design Systems & Styles</h2>
+                        <p>Establish consistent design systems using shared styles for colors, text, and effects.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Creating Styles</h3>
+                            <p>Styles allow you to maintain consistency across your designs by reusing color, text, and effect properties.</p>
+                            <ul>
+                                <li><strong>Color Styles:</strong> Save and reuse specific colors</li>
+                                <li><strong>Text Styles:</strong> Maintain consistent typography</li>
+                                <li><strong>Effect Styles:</strong> Apply consistent shadows, blurs, and borders</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="interactive-element">
+                            <h3>Using Team Libraries</h3>
+                            <p>Share styles and components across your team with Team Libraries.</p>
+                            <ul>
+                                <li>Publish components and styles to make them available to your team</li>
+                                <li>Receive notifications when library updates are available</li>
+                                <li>Override library components when needed for specific projects</li>
+                                <li>Merge library updates to keep your files current</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h4>Design System Benefits:</h4>
+                            <ul>
+                                <li>Improved design consistency</li>
+                                <li>Faster design process</li>
+                                <li>Easier collaboration</li>
+                                <li>Simplified handoff to developers</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h2>Practice Exercise</h2>
+                        <p>Create a responsive card component with the following features:</p>
+                        <ul>
+                            <li>Use Auto Layout for proper spacing</li>
+                            <li>Create variants for different states (default, hover, selected)</li>
+                            <li>Apply consistent styling with shared styles</li>
+                            <li>Add interactive elements like buttons and links</li>
+                        </ul>
+                        <p>Experiment with different content types (image, text, icons) to make it versatile.</p>
+                        
+                        <div class="interactive-element">
+                            <h3>Advanced Challenge</h3>
+                            <p>Enhance your card component with these additional features:</p>
+                            <ul>
+                                <li>Create a component library with multiple card types</li>
+                                <li>Implement responsive layouts that adapt to different screen sizes</li>
+                                <li>Add prototyping interactions to demonstrate functionality</li>
+                                <li>Document your design system with clear naming conventions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="center-button">
+                    <a href="advanced.html" class="cta-button">Continue to Advanced</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Figma Developer Guide &copy; 2023 | Learn Figma from basics to advanced techniques</p>
+            <p>This educational resource is designed to help you master Figma development skills through structured learning paths and hands-on practice.</p>
+            <p>Created by Anand Binu Arjun</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
