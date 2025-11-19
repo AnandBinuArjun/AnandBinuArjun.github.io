@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://AnandBinuArjun.github.io/html-guide/sitemap.xml

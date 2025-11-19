@@ -1,0 +1,799 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #cccccc;
+    background-color: #1e1e1e;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles - VS Code Style */
+header {
+    background-color: #3c3c3c;
+    color: white;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #007acc;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo span {
+    color: #007acc;
+    margin-left: 5px;
+}
+
+.nav-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    padding: 0 10px;
+}
+
+.nav-tools {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-secondary {
+    background-color: #252526;
+    padding: 0;
+}
+
+.nav-secondary ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-secondary ul li {
+    margin: 0;
+}
+
+.nav-secondary ul li a {
+    color: #d4d4d4;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.2s ease;
+    border-right: 1px solid #3c3c3c;
+}
+
+.nav-secondary ul li a:hover {
+    background-color: #007acc;
+    color: white;
+}
+
+.nav-secondary ul li a.active {
+    background-color: #007acc;
+    color: white;
+}
+
+/* Hero Section - VS Code Style */
+.hero {
+    background: linear-gradient(135deg, #007acc 0%, #005a9e 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    background: #007acc;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    border: 1px solid #007acc;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    margin: 10px 5px;
+}
+
+.btn:hover {
+    background: #005a9e;
+    border-color: #005a9e;
+}
+
+.btn-secondary {
+    background: #3c3c3c;
+    color: white;
+    border: 1px solid #3c3c3c;
+}
+
+.btn-secondary:hover {
+    background: #2d2d2d;
+    border-color: #2d2d2d;
+}
+
+/* Content Sections - VS Code Style */
+.content-section {
+    padding: 3rem 0;
+    background-color: #1e1e1e;
+    margin-bottom: 2rem;
+    border-radius: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #3c3c3c;
+}
+
+.content-section:nth-child(even) {
+    background-color: #252526;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #007acc;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.content-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: #007acc;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: #4ec9b0;
+}
+
+.content-section h4 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 1rem;
+    color: #c586c0;
+}
+
+.content-section p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.content-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Interactive Dashboard */
+.interactive-dashboard {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1e1e1e 100%);
+}
+
+.dashboard-card {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    border-radius: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 122, 204, 0.3);
+    border-color: #007acc;
+}
+
+.dashboard-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard-card h3 {
+    color: #007acc;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #3c3c3c;
+    border-radius: 0;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #007acc, #005a9e);
+    border-radius: 0;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #999999;
+}
+
+/* Educational Pathway */
+.educational-pathway {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.pathway-step {
+    flex: 1;
+    min-width: 200px;
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #007acc;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-content h3 {
+    color: #007acc;
+    margin-top: 0.5rem;
+}
+
+/* User Journey */
+.user-journey {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.user-journey-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.user-journey-step {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    border: 1px solid #3c3c3c;
+}
+
+.user-journey-step-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-journey-step h5 {
+    color: #007acc;
+    margin-bottom: 0.5rem;
+}
+
+/* Skill Levels */
+.skill-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.beginner {
+    background-color: #2d2d2d;
+    color: #4ec9b0;
+    border: 1px solid #4ec9b0;
+}
+
+.intermediate {
+    background-color: #2d2d2d;
+    color: #d16969;
+    border: 1px solid #d16969;
+}
+
+.advanced {
+    background-color: #2d2d2d;
+    color: #c586c0;
+    border: 1px solid #c586c0;
+}
+
+/* Learning Objectives */
+.learning-objectives {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.learning-objectives h4 {
+    margin-top: 0;
+}
+
+.learning-objectives ul {
+    margin-top: 1rem;
+}
+
+.learning-objectives li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.learning-objectives li::before {
+    content: "✓";
+    color: #4ec9b0;
+    position: absolute;
+    left: 0;
+}
+
+/* Educational Tips */
+.educational-tip {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid #007acc;
+}
+
+.educational-tip h4 {
+    margin-top: 0;
+    color: #007acc;
+}
+
+/* Example Cards */
+.example-card {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.example-card h3 {
+    color: #007acc;
+    margin-top: 0;
+}
+
+/* Code Blocks */
+pre {
+    background-color: #1e1e1e;
+    border: 1px solid #3c3c3c;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+    position: relative;
+}
+
+pre code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #3c3c3c;
+    color: #d4d4d4;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 0;
+}
+
+.copy-btn:hover {
+    background: #007acc;
+    color: white;
+}
+
+/* Best Practices */
+.best-practices {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.best-practices h4 {
+    margin-top: 0;
+}
+
+.best-practices ul {
+    margin-top: 1rem;
+}
+
+.best-practices li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.best-practices li::before {
+    content: "✓";
+    color: #4ec9b0;
+    position: absolute;
+    left: 0;
+}
+
+/* Interactive Learning */
+.interactive-learning {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.interactive-learning h4 {
+    margin-top: 0;
+    color: #007acc;
+}
+
+/* Image Containers */
+.image-container {
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #3c3c3c;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    position: relative;
+}
+
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -8px;
+    background-color: #007acc;
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -8px;
+}
+
+.timeline-date {
+    color: #007acc;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-milestone {
+    display: inline-block;
+    background-color: #3c3c3c;
+    color: #d4d4d4;
+    padding: 0.3rem 0.8rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Certifications */
+.cert-image {
+    height: 150px;
+    background: linear-gradient(135deg, #007acc 0%, #005a9e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.cert-image h3 {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.cert-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.cert-level, .cert-duration {
+    background-color: #3c3c3c;
+    color: #d4d4d4;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: #3c3c3c;
+    color: #d4d4d4;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #007acc;
+}
+
+footer a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-secondary ul {
+        flex-direction: column;
+    }
+    
+    .nav-secondary ul li a {
+        border-right: none;
+        border-bottom: 1px solid #3c3c3c;
+    }
+    
+    .educational-pathway {
+        flex-direction: column;
+    }
+    
+    .pathway-step {
+        width: 100%;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-content::after {
+        left: -8px;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-content::after {
+        left: -8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .content-section {
+        padding: 2rem 0;
+    }
+    
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .user-journey-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-main {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .nav-tools {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin: 5px;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .content-section h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .hero {
+        padding: 1.5rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+    
+    .content-section {
+        padding: 1.5rem 0;
+    }
+    
+    pre {
+        padding: 0.5rem;
+    }
+}

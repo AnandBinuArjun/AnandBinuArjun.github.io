@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search HTMLCode - VS Code Style Educational Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loader"></div>
+            <div class="loader-text">Loading Search Page...</div>
+        </div>
+    </div>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="nav-main">
+            <a href="index.html" class="logo">HTML<span>Code</span></a>
+            <div class="nav-tools">
+                <a href="about.html" class="btn btn-secondary">About</a>
+                <a href="contact.html" class="btn btn-secondary">Contact</a>
+            </div>
+        </div>
+        <nav class="nav-secondary">
+            <ul>
+                <li><a href="index.html#basics">HTML Basics</a></li>
+                <li><a href="index.html#intermediate">Intermediate</a></li>
+                <li><a href="index.html#advanced">Advanced</a></li>
+                <li><a href="index.html#certifications">Certifications</a></li>
+                <li><a href="index.html#practical-examples">Examples</a></li>
+                <li><a href="index.html#timeline">Learning Path</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Search HTMLCode</h1>
+            <h2>Find Exactly What You Need in Our VS Code Style Educational Platform</h2>
+            <p>Quickly locate tutorials, examples, and resources to accelerate your HTML learning</p>
+        </div>
+    </section>
+
+    <!-- Search Content -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Search Our Resources</h2>
+            <p>Enter keywords to find tutorials, examples, and learning materials</p>
+            
+            <form class="search-form">
+                <div class="form-group">
+                    <label for="search-query">Search Query</label>
+                    <input type="text" id="search-query" name="query" placeholder="e.g., forms, tables, accessibility..." required>
+                </div>
+                
+                <div class="grid">
+                    <div class="form-group">
+                        <label for="search-category">Category</label>
+                        <select id="search-category" name="category">
+                            <option value="all">All Categories</option>
+                            <option value="basics">HTML Basics</option>
+                            <option value="intermediate">Intermediate Concepts</option>
+                            <option value="advanced">Advanced Techniques</option>
+                            <option value="examples">Practical Examples</option>
+                            <option value="certifications">Certifications</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="search-difficulty">Difficulty Level</label>
+                        <select id="search-difficulty" name="difficulty">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn">Search Resources</button>
+            </form>
+            
+            <div class="search-results" id="search-results">
+                <h3>Search Results</h3>
+                <p>Enter a search term above to see results</p>
+                <!-- Search results will be dynamically populated here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Searches -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Popular Search Topics</h2>
+            <p>Explore our most sought-after learning resources</p>
+            
+            <div class="grid grid-auto-small">
+                <div class="example-card">
+                    <h3>HTML Forms</h3>
+                    <p>Learn to create interactive forms with validation and accessibility features.</p>
+                    <a href="index.html#intermediate" class="btn btn-secondary">Explore Forms</a>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Semantic HTML</h3>
+                    <p>Master semantic markup for better accessibility and SEO.</p>
+                    <a href="index.html#advanced" class="btn btn-secondary">Explore Semantics</a>
+                </div>
+                
+                <div class="example-card">
+                    <h3>HTML Tables</h3>
+                    <p>Create well-structured tables for data presentation.</p>
+                    <a href="index.html#intermediate" class="btn btn-secondary">Explore Tables</a>
+                </div>
+                
+                <div class="example-card">
+                    <h3>Accessibility</h3>
+                    <p>Implement inclusive design practices for all users.</p>
+                    <a href="index.html#advanced" class="btn btn-secondary">Explore Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Tips -->
+    <section class="content-section">
+        <div class="container">
+            <h2>Search Tips</h2>
+            
+            <div class="best-practices">
+                <h4>Maximize Your Search Results</h4>
+                <ul>
+                    <li>Use specific keywords related to HTML elements or concepts</li>
+                    <li>Try variations of your search terms (e.g., "forms" vs "form elements")</li>
+                    <li>Filter by category to narrow down results</li>
+                    <li>Use difficulty level filters to match your current skill level</li>
+                    <li>Check our popular topics if you're unsure what to search for</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Complete HTML Guide - VS Code Style Educational Platform</p>
+            <p>© 2023 HTML Education. All rights reserved.</p>
+            <p><a href="about.html" style="color: #007acc;">About Us</a> | <a href="contact.html" style="color: #007acc;">Contact</a> | <a href="#" style="color: #007acc;">Privacy Policy</a></p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

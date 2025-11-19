@@ -1,0 +1,97 @@
+/* Print Styles */
+@media print {
+    /* Hide unnecessary elements */
+    nav, .theme-toggle, .copy-btn, .menu-toggle {
+        display: none !important;
+    }
+    
+    /* Reset body styles for print */
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    /* Header styles */
+    header {
+        background: none;
+        color: black;
+        padding: 1rem 0;
+        text-align: left;
+    }
+    
+    header h1 {
+        font-size: 24pt;
+        color: black;
+    }
+    
+    /* Section styles */
+    .content-section {
+        padding: 1rem 0;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .content-section h2 {
+        font-size: 18pt;
+        color: black;
+        border-bottom: 1pt solid #ccc;
+        padding-bottom: 0.5rem;
+    }
+    
+    .content-section h3 {
+        font-size: 14pt;
+        color: black;
+    }
+    
+    /* Code blocks */
+    pre {
+        background: #f5f5f5;
+        color: black;
+        border: 1pt solid #ccc;
+        padding: 10pt;
+        font-size: 10pt;
+        page-break-inside: avoid;
+    }
+    
+    code {
+        background: #f5f5f5;
+        color: black;
+    }
+    
+    /* Links */
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+    
+    /* Footer */
+    footer {
+        background: none;
+        color: black;
+        text-align: center;
+        padding: 1rem 0;
+        border-top: 1pt solid #ccc;
+    }
+    
+    /* Hide dark theme styles */
+    .dark-theme body,
+    .dark-theme .content-section,
+    .dark-theme header,
+    .dark-theme footer {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .dark-theme pre,
+    .dark-theme code {
+        background: #f5f5f5 !important;
+        color: black !important;
+    }
+}

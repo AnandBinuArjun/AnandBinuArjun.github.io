@@ -1,0 +1,142 @@
+/* VS Code Syntax Highlighting Styles */
+
+/* General code block styling */
+pre[class*="language-"] {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    border-radius: 0;
+    border: 1px solid #3c3c3c;
+    position: relative;
+    overflow: hidden;
+}
+
+pre[class*="language-"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #007acc;
+}
+
+/* Line highlighting */
+pre[class*="language-"] .line-highlight {
+    background: rgba(0, 122, 204, 0.1);
+    border-left: 3px solid #007acc;
+}
+
+/* Token colors matching VS Code */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6a9955;
+}
+
+.token.punctuation {
+    color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+    color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #c586c0;
+}
+
+.token.function,
+.token.class-name {
+    color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d16969;
+}
+
+/* Language-specific styles */
+.language-css .token.property,
+.language-scss .token.property {
+    color: #9cdcfe;
+}
+
+.language-css .token.selector,
+.language-scss .token.selector {
+    color: #d7ba7d;
+}
+
+.language-javascript .token.function {
+    color: #dcdcaa;
+}
+
+.language-javascript .token.keyword {
+    color: #569cd6;
+}
+
+.language-html .token.tag {
+    color: #569cd6;
+}
+
+.language-html .token.attr-name {
+    color: #9cdcfe;
+}
+
+.language-html .token.attr-value {
+    color: #ce9178;
+}
+
+/* Highlighting for important elements */
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+/* Selection color */
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+    background: #264f78;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    background: #264f78;
+}

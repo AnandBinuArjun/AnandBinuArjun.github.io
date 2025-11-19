@@ -1,0 +1,108 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node {
+      fill: #3c3c3c;
+      stroke: #007acc;
+      stroke-width: 2;
+      rx: 10;
+      ry: 10;
+    }
+    .node-text {
+      fill: #cccccc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 14px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+    }
+    .arrow {
+      stroke: #007acc;
+      stroke-width: 2;
+      marker-end: url(#arrowhead);
+    }
+    .arrow-text {
+      fill: #cccccc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 12px;
+      text-anchor: middle;
+    }
+    .input-node {
+      fill: #2d2d2d;
+      stroke: #c586c0;
+      stroke-width: 2;
+      rx: 10;
+      ry: 10;
+    }
+  </style>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#007acc" />
+    </marker>
+  </defs>
+  
+  <!-- Form Structure -->
+  <rect x="300" y="50" width="200" height="50" class="node" />
+  <text x="400" y="75" class="node-text">&lt;form&gt;</text>
+  
+  <rect x="300" y="130" width="200" height="50" class="node" />
+  <text x="400" y="155" class="node-text">&lt;fieldset&gt;</text>
+  
+  <rect x="300" y="210" width="200" height="50" class="node" />
+  <text x="400" y="235" class="node-text">&lt;legend&gt;</text>
+  
+  <!-- Input Elements -->
+  <rect x="100" y="300" width="150" height="40" class="input-node" />
+  <text x="175" y="320" class="node-text">&lt;input type="text"&gt;</text>
+  
+  <rect x="275" y="300" width="150" height="40" class="input-node" />
+  <text x="350" y="320" class="node-text">&lt;input type="email"&gt;</text>
+  
+  <rect x="450" y="300" width="150" height="40" class="input-node" />
+  <text x="525" y="320" class="node-text">&lt;textarea&gt;</text>
+  
+  <rect x="625" y="300" width="150" height="40" class="input-node" />
+  <text x="700" y="320" class="node-text">&lt;select&gt;</text>
+  
+  <!-- Labels -->
+  <rect x="100" y="370" width="150" height="40" class="node" />
+  <text x="175" y="390" class="node-text">&lt;label&gt;</text>
+  
+  <rect x="275" y="370" width="150" height="40" class="node" />
+  <text x="350" y="390" class="node-text">&lt;label&gt;</text>
+  
+  <rect x="450" y="370" width="150" height="40" class="node" />
+  <text x="525" y="390" class="node-text">&lt;label&gt;</text>
+  
+  <rect x="625" y="370" width="150" height="40" class="node" />
+  <text x="700" y="390" class="node-text">&lt;label&gt;</text>
+  
+  <!-- Submit Button -->
+  <rect x="350" y="450" width="150" height="40" class="node" />
+  <text x="425" y="470" class="node-text">&lt;button type="submit"&gt;</text>
+  
+  <!-- Arrows -->
+  <line x1="400" y1="100" x2="400" y2="130" class="arrow" />
+  <line x1="400" y1="180" x2="400" y2="210" class="arrow" />
+  
+  <line x1="400" y1="260" x2="175" y2="300" class="arrow" />
+  <line x1="400" y1="260" x2="350" y2="300" class="arrow" />
+  <line x1="400" y1="260" x2="525" y2="300" class="arrow" />
+  <line x1="400" y1="260" x2="700" y2="300" class="arrow" />
+  
+  <line x1="175" y1="340" x2="175" y2="370" class="arrow" />
+  <line x1="350" y1="340" x2="350" y2="370" class="arrow" />
+  <line x1="525" y1="340" x2="525" y2="370" class="arrow" />
+  <line x1="700" y1="340" x2="700" y2="370" class="arrow" />
+  
+  <line x1="175" y1="410" x2="425" y2="450" class="arrow" />
+  <line x1="350" y1="410" x2="425" y2="450" class="arrow" />
+  <line x1="525" y1="410" x2="425" y2="450" class="arrow" />
+  <line x1="700" y1="410" x2="425" y2="450" class="arrow" />
+  
+  <!-- Labels -->
+  <text x="400" y="155" class="arrow-text">Group Related Fields</text>
+  <text x="400" y="235" class="arrow-text">Field Group Title</text>
+  <text x="175" y="320" class="arrow-text">Text Input</text>
+  <text x="525" y="320" class="arrow-text">Text Area</text>
+  <text x="700" y="320" class="arrow-text">Dropdown</text>
+</svg>
