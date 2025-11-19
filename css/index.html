@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>CSS Learning Guide | From Basics to Advanced</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <header>
+                <div class="header-content">
+                    <h1>CSS Learning Guide</h1>
+                    <p class="subtitle">From Basics to Advanced Concepts</p>
+                    <p class="intro">Master Cascading Style Sheets with this comprehensive guide covering fundamental concepts to advanced techniques. Perfect for beginners and experienced developers alike!</p>
+                    <div class="search-container">
+                        <input type="text" class="search-input interactive-element" placeholder="Search CSS topics..." id="search-input">
+                        <div class="search-results" id="search-results"></div>
+                    </div>
+                    <div class="header-stats">
+                        <div class="stat-item interactive-element" tabindex="0" data-tooltip="Comprehensive chapters covering all CSS concepts">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Chapters</div>
+                        </div>
+                        <div class="stat-item interactive-element" tabindex="0" data-tooltip="Practical examples for better understanding">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Examples</div>
+                        </div>
+                        <div class="stat-item interactive-element" tabindex="0" data-tooltip="Completely free learning resource">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Free</div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <span>Your Progress</span>
+                            <span id="progress-percent">0%</span>
+                        </div>
+                        <div class="progress-bar interactive-element">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <button class="btn interactive-element" id="reset-progress">Reset Progress</button>
+                    </div>
+                    <a href="#what-is-css" class="btn interactive-element">Start Learning</a>
+                </div>
+            </header>
+
+            <nav>
+                <ul>
+                    <li><a href="#beginner" class="interactive-element" tabindex="0">Beginner</a></li>
+                    <li><a href="#intermediate" class="interactive-element" tabindex="0">Intermediate</a></li>
+                    <li><a href="#advanced" class="interactive-element" tabindex="0">Advanced</a></li>
+                    <li><a href="#frameworks" class="interactive-element" tabindex="0">Frameworks</a></li>
+                    <li><a href="#certifications" class="interactive-element" tabindex="0">Certifications</a></li>
+                    <li><a href="#projects" class="interactive-element" tabindex="0">Projects</a></li>
+                    <li><a href="#resources" class="interactive-element" tabindex="0">Resources</a></li>
+                </ul>
+            </nav>
+            
+            <section class="toc-section" id="toc">
+                <h2>Table of Contents</h2>
+                <div class="toc-grid">
+                    <div class="toc-column">
+                        <h3>Beginner Topics</h3>
+                        <ul>
+                            <li><a href="#what-is-css" class="interactive-element" tabindex="0">What is CSS?</a></li>
+                            <li><a href="#linking-css" class="interactive-element" tabindex="0">Linking CSS to HTML</a></li>
+                            <li><a href="#css-syntax" class="interactive-element" tabindex="0">Basic CSS Syntax</a></li>
+                            <li><a href="#common-properties" class="interactive-element" tabindex="0">Common CSS Properties</a></li>
+                            <li><a href="#selectors" class="interactive-element" tabindex="0">Selectors</a></li>
+                            <li><a href="#css-specificity" class="interactive-element" tabindex="0">CSS Specificity</a></li>
+                        </ul>
+                    </div>
+                    <div class="toc-column">
+                        <h3>Intermediate Topics</h3>
+                        <ul>
+                            <li><a href="#box-model" class="interactive-element" tabindex="0">The Box Model</a></li>
+                            <li><a href="#positioning" class="interactive-element" tabindex="0">Positioning</a></li>
+                            <li><a href="#flexbox" class="interactive-element" tabindex="0">Flexbox</a></li>
+                            <li><a href="#css-grid" class="interactive-element" tabindex="0">CSS Grid</a></li>
+                            <li><a href="#pseudo-classes" class="interactive-element" tabindex="0">Pseudo-classes & Pseudo-elements</a></li>
+                        </ul>
+                    </div>
+                    <div class="toc-column">
+                        <h3>Advanced Topics</h3>
+                        <ul>
+                            <li><a href="#css-variables" class="interactive-element" tabindex="0">CSS Variables</a></li>
+                            <li><a href="#transforms" class="interactive-element" tabindex="0">Transforms</a></li>
+                            <li><a href="#transitions" class="interactive-element" tabindex="0">Transitions</a></li>
+                            <li><a href="#animations" class="interactive-element" tabindex="0">Animations</a></li>
+                            <li><a href="#media-queries" class="interactive-element" tabindex="0">Media Queries</a></li>
+                            <li><a href="#preprocessors" class="interactive-element" tabindex="0">CSS Preprocessors</a></li>
+                        </ul>
+                    </div>
+                    <div class="toc-column">
+                        <h3>Additional Resources</h3>
+                        <ul>
+                            <li><a href="#frameworks" class="interactive-element" tabindex="0">CSS Frameworks</a></li>
+                            <li><a href="#certifications" class="interactive-element" tabindex="0">Certifications</a></li>
+                            <li><a href="#projects" class="interactive-element" tabindex="0">Open Source Projects</a></li>
+                            <li><a href="#resources" class="interactive-element" tabindex="0">Learning Resources</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="beginner">
+                <h2>Beginner CSS Concepts</h2>
+                
+                <h3 id="what-is-css">What is CSS?</h3>
+                <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of a document written in HTML. It controls the layout, colors, fonts, and overall visual appearance of web pages.</p>
+                
+                <div class="educational-chart">
+                    <h3>How CSS Works in the Browser</h3>
+                    <div class="flowchart">
+                        <div class="flow-item">HTML Document</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-item">Browser Rendering Engine</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-row">
+                            <div class="flow-item">HTML Parser<br><span class="flow-sub">DOM Tree</span></div>
+                            <div class="flow-item">CSS Parser<br><span class="flow-sub">CSSOM Tree</span></div>
+                        </div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-item">Render Tree<br><span class="flow-sub">(DOM + CSSOM)</span></div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-item">Layout Calculation</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-item">Painting</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-item">Display on Screen</div>
+                    </div>
+                </div>
+                
+                <h3>Why Learn CSS?</h3>
+                <div class="concept-grid">
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Visual Appeal</h4>
+                        <p>Create beautiful, engaging websites that attract and retain users</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>User Experience</h4>
+                        <p>Enhance usability with intuitive layouts and responsive designs</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Career Opportunities</h4>
+                        <p>Essential skill for web developers, UI/UX designers, and digital marketers</p>
+                    </div>
+                </div>
+                
+                <h3 id="linking-css">Linking CSS to HTML</h3>
+                <p>There are three ways to apply CSS to HTML:</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">External Stylesheet (Recommended)</div>
+                    <span class="comment">&lt;!-- In HTML head section --&gt;</span><br>
+                    &lt;<span class="selector">link</span> <span class="property">rel</span>=<span class="value">"stylesheet"</span> <span class="property">href</span>=<span class="value">"styles.css"</span>&gt;
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Internal Stylesheet</div>
+                    <span class="comment">&lt;!-- In HTML head section --&gt;</span><br>
+                    &lt;<span class="selector">style</span>&gt;<br>
+                    &nbsp;&nbsp;<span class="selector">body</span> {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#f0f0f0</span>;<br>
+                    &nbsp;&nbsp;}<br>
+                    &lt;/<span class="selector">style</span>&gt;
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Inline Styles</div>
+                    <span class="comment">&lt;!-- Directly in HTML elements (Not recommended) --&gt;</span><br>
+                    &lt;<span class="selector">p</span> <span class="property">style</span>=<span class="value">"color: blue;"</span>&gt;This is a paragraph.&lt;/<span class="selector">p</span>&gt;
+                </div>
+                
+                <h3 id="css-syntax">Basic CSS Syntax</h3>
+                <p>CSS rules consist of selectors and declarations:</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <span class="selector">selector</span> {<br>
+                    &nbsp;&nbsp;<span class="property">property</span>: <span class="value">value</span>;<br>
+                    &nbsp;&nbsp;<span class="property">another-property</span>: <span class="value">another-value</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="common-properties">Common CSS Properties</h3>
+                
+                <div class="concept-grid">
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Color & Background</h4>
+                        <p><span class="property">color</span>, <span class="property">background-color</span>, <span class="property">background-image</span></p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Text Styling</h4>
+                        <p><span class="property">font-family</span>, <span class="property">font-size</span>, <span class="property">text-align</span></p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Box Model</h4>
+                        <p><span class="property">margin</span>, <span class="property">padding</span>, <span class="property">border</span>, <span class="property">width</span>, <span class="property">height</span></p>
+                    </div>
+                </div>
+                
+                <div class="educational-note">
+                    <h4>Did You Know?</h4>
+                    <p>CSS stands for Cascading Style Sheets. The "cascading" part refers to how styles are applied in a hierarchy - from external stylesheets to internal styles to inline styles.</p>
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Example: Styling a Paragraph</div>
+                    <span class="selector">p</span> {<br>
+                    &nbsp;&nbsp;<span class="property">color</span>: <span class="value">#333</span>;<br>
+                    &nbsp;&nbsp;<span class="property">font-family</span>: <span class="value">Arial, sans-serif</span>;<br>
+                    &nbsp;&nbsp;<span class="property">font-size</span>: <span class="value">16px</span>;<br>
+                    &nbsp;&nbsp;<span class="property">line-height</span>: <span class="value">1.5</span>;<br>
+                    &nbsp;&nbsp;<span class="property">margin-bottom</span>: <span class="value">15px</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="selectors">Selectors</h3>
+                <p>Selectors are used to target HTML elements for styling:</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Element Selector</div>
+                    <span class="selector">p</span> { <span class="property">color</span>: <span class="value">blue</span>; } <span class="comment">/* Targets all &lt;p&gt; elements */</span>
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Class Selector</div>
+                    <span class="selector">.highlight</span> { <span class="property">background-color</span>: <span class="value">yellow</span>; } <span class="comment">/* Targets elements with class="highlight" */</span>
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">ID Selector</div>
+                    <span class="selector">#main-header</span> { <span class="property">font-size</span>: <span class="value">2em</span>; } <span class="comment">/* Targets element with id="main-header" */</span>
+                </div>
+                
+                <h3 id="css-specificity">CSS Specificity</h3>
+                <p>Specificity determines which CSS rule is applied when multiple rules target the same element:</p>
+                
+                <div class="specificity-chart">
+                    <div class="specificity-level highest">
+                        <div class="specificity-header">Inline Styles</div>
+                        <div class="specificity-value">1000</div>
+                        <div class="specificity-example">&lt;p style="color: red;"&gt;</div>
+                    </div>
+                    <div class="specificity-level high">
+                        <div class="specificity-header">ID Selectors</div>
+                        <div class="specificity-value">100</div>
+                        <div class="specificity-example">#header { }</div>
+                    </div>
+                    <div class="specificity-level medium">
+                        <div class="specificity-header">Classes, Attributes, Pseudo-classes</div>
+                        <div class="specificity-value">10</div>
+                        <div class="specificity-example">.menu, [type="text"], :hover</div>
+                    </div>
+                    <div class="specificity-level low">
+                        <div class="specificity-header">Elements, Pseudo-elements</div>
+                        <div class="specificity-value">1</div>
+                        <div class="specificity-example">p, div, ::before</div>
+                    </div>
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Example: Specificity in Action</div>
+                    <span class="selector">p</span> { <span class="property">color</span>: <span class="value">blue</span>; } <span class="comment">/* Specificity: 1 */</span><br>
+                    <span class="selector">.text</span> { <span class="property">color</span>: <span class="value">red</span>; } <span class="comment">/* Specificity: 10 */</span><br>
+                    <span class="selector">#paragraph</span> { <span class="property">color</span>: <span class="value">green</span>; } <span class="comment">/* Specificity: 100 */</span><br>
+                    &lt;<span class="selector">p</span> <span class="property">style</span>=<span class="value">"color: purple;"</span>&gt;Text&lt;/<span class="selector">p</span>&gt; <span class="comment">/* Specificity: 1000 */</span>
+                </div>
+            </section>
+            
+            <section id="intermediate">
+                <h2>Intermediate CSS Concepts</h2>
+                
+                <h3 id="box-model">The Box Model</h3>
+                <p>Every HTML element is a rectangular box with four areas: content, padding, border, and margin.</p>
+                
+                <div class="educational-chart">
+                    <h3>CSS Box Model</h3>
+                    <div class="box-model-diagram">
+                        <div class="box-model-margin">
+                            <div class="box-model-border">
+                                <div class="box-model-padding">
+                                    <div class="box-model-content">
+                                        Content
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-model-label">Margin</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Box Model Properties</div>
+                    <span class="selector">.box</span> {<br>
+                    &nbsp;&nbsp;<span class="property">width</span>: <span class="value">200px</span>;<br>
+                    &nbsp;&nbsp;<span class="property">height</span>: <span class="value">100px</span>;<br>
+                    &nbsp;&nbsp;<span class="property">padding</span>: <span class="value">20px</span>;<br>
+                    &nbsp;&nbsp;<span class="property">border</span>: <span class="value">5px solid #333</span>;<br>
+                    &nbsp;&nbsp;<span class="property">margin</span>: <span class="value">10px</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="positioning">Positioning</h3>
+                <p>CSS positioning allows you to control the exact placement of elements on the page.</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Static (Default)</h4>
+                        <p>Elements follow the normal document flow</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Relative</h4>
+                        <p>Positioned relative to its normal position</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Absolute</h4>
+                        <p>Positioned relative to its nearest positioned ancestor</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Fixed</h4>
+                        <p>Positioned relative to the viewport</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Sticky</h4>
+                        <p>Toggles between relative and fixed based on scroll position</p>
+                    </div>
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Positioning Examples</div>
+                    <span class="selector">.relative</span> { <span class="property">position</span>: <span class="value">relative</span>; <span class="property">top</span>: <span class="value">10px</span>; <span class="property">left</span>: <span class="value">20px</span>; }<br>
+                    <span class="selector">.absolute</span> { <span class="property">position</span>: <span class="value">absolute</span>; <span class="property">top</span>: <span class="value">0</span>; <span class="property">right</span>: <span class="value">0</span>; }<br>
+                    <span class="selector">.fixed</span> { <span class="property">position</span>: <span class="value">fixed</span>; <span class="property">bottom</span>: <span class="value">20px</span>; <span class="property">right</span>: <span class="value">20px</span>; }<br>
+                    <span class="selector">.sticky</span> { <span class="property">position</span>: <span class="value">sticky</span>; <span class="property">top</span>: <span class="value">0</span>; }
+                </div>
+                
+                <h3 id="flexbox">Flexbox</h3>
+                <p>Flexbox is a layout model that allows elements to align and distribute space within a container.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Basic Flexbox Container</div>
+                    <span class="selector">.flex-container</span> {<br>
+                    &nbsp;&nbsp;<span class="property">display</span>: <span class="value">flex</span>;<br>
+                    &nbsp;&nbsp;<span class="property">justify-content</span>: <span class="value">center</span>;<br>
+                    &nbsp;&nbsp;<span class="property">align-items</span>: <span class="value">center</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="css-grid">CSS Grid</h3>
+                <p>CSS Grid is a two-dimensional layout system for creating complex web layouts.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Basic Grid Container</div>
+                    <span class="selector">.grid-container</span> {<br>
+                    &nbsp;&nbsp;<span class="property">display</span>: <span class="value">grid</span>;<br>
+                    &nbsp;&nbsp;<span class="property">grid-template-columns</span>: <span class="value">1fr 1fr 1fr</span>;<br>
+                    &nbsp;&nbsp;<span class="property">gap</span>: <span class="value">20px</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="pseudo-classes">Pseudo-classes & Pseudo-elements</h3>
+                <p>Pseudo-classes and pseudo-elements allow you to style elements in specific states or add content without modifying HTML.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Pseudo-classes</div>
+                    <span class="selector">a:hover</span> { <span class="property">color</span>: <span class="value">red</span>; }<br>
+                    <span class="selector">input:focus</span> { <span class="property">border-color</span>: <span class="value">blue</span>; }<br>
+                    <span class="selector">li:nth-child(odd)</span> { <span class="property">background-color</span>: <span class="value">#f0f0f0</span>; }
+                </div>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Pseudo-elements</div>
+                    <span class="selector">p::before</span> { <span class="property">content</span>: <span class="value">"Note: "</span>; }<br>
+                    <span class="selector">p::after</span> { <span class="property">content</span>: <span class="value">" - End"</span>; }<br>
+                    <span class="selector">.quote::first-line</span> { <span class="property">font-weight</span>: <span class="value">bold</span>; }
+                </div>
+            </section>
+            
+            <section id="advanced">
+                <h2>Advanced CSS Concepts</h2>
+                
+                <h3 id="css-variables">CSS Variables (Custom Properties)</h3>
+                <p>CSS variables allow you to store and reuse values throughout your stylesheet.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Defining and Using CSS Variables</div>
+                    <span class="selector">:root</span> {<br>
+                    &nbsp;&nbsp;<span class="property">--main-color</span>: <span class="value">#3498db</span>;<br>
+                    &nbsp;&nbsp;<span class="property">--border-radius</span>: <span class="value">5px</span>;<br>
+                    }<br><br>
+                    <span class="selector">.button</span> {<br>
+                    &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">var(--main-color)</span>;<br>
+                    &nbsp;&nbsp;<span class="property">border-radius</span>: <span class="value">var(--border-radius)</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="transforms">Transforms</h3>
+                <p>Transforms allow you to rotate, scale, skew, or translate elements.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Transform Examples</div>
+                    <span class="selector">.rotate</span> { <span class="property">transform</span>: <span class="value">rotate(45deg)</span>; }<br>
+                    <span class="selector">.scale</span> { <span class="property">transform</span>: <span class="value">scale(1.2)</span>; }<br>
+                    <span class="selector">.translate</span> { <span class="property">transform</span>: <span class="value">translate(10px, 20px)</span>; }<br>
+                    <span class="selector">.skew</span> { <span class="property">transform</span>: <span class="value">skew(10deg, 5deg)</span>; }
+                </div>
+                
+                <h3 id="transitions">Transitions</h3>
+                <p>Transitions allow you to change property values smoothly over a specified duration.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Transition Example</div>
+                    <span class="selector">.button</span> {<br>
+                    &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#3498db</span>;<br>
+                    &nbsp;&nbsp;<span class="property">transition</span>: <span class="value">background-color 0.3s ease</span>;<br>
+                    }<br><br>
+                    <span class="selector">.button:hover</span> {<br>
+                    &nbsp;&nbsp;<span class="property">background-color</span>: <span class="value">#2980b9</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="animations">Animations</h3>
+                <p>Animations allow you to create complex animations using keyframes.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Animation Example</div>
+                    <span class="comment">@keyframes slideIn {</span><br>
+                    &nbsp;&nbsp;<span class="selector">from</span> { <span class="property">transform</span>: <span class="value">translateX(-100%)</span>; }<br>
+                    &nbsp;&nbsp;<span class="selector">to</span> { <span class="property">transform</span>: <span class="value">translateX(0)</span>; }<br>
+                    <span class="comment">}</span><br><br>
+                    <span class="selector">.animated-element</span> {<br>
+                    &nbsp;&nbsp;<span class="property">animation</span>: <span class="value">slideIn 0.5s ease</span>;<br>
+                    }
+                </div>
+                
+                <h3 id="media-queries">Media Queries</h3>
+                <p>Media queries allow you to apply different styles based on device characteristics.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Media Query Example</div>
+                    <span class="comment">/* Desktop styles */</span><br>
+                    <span class="selector">.container</span> { <span class="property">width</span>: <span class="value">1200px</span>; }<br><br>
+                    <span class="comment">/* Tablet styles */</span><br>
+                    <span class="keyword">@media</span> (<span class="property">max-width</span>: <span class="value">768px</span>) {<br>
+                    &nbsp;&nbsp;<span class="selector">.container</span> { <span class="property">width</span>: <span class="value">100%</span>; <span class="property">padding</span>: <span class="value">0 20px</span>; }<br>
+                    }<br><br>
+                    <span class="comment">/* Mobile styles */</span><br>
+                    <span class="keyword">@media</span> (<span class="property">max-width</span>: <span class="value">480px</span>) {<br>
+                    &nbsp;&nbsp;<span class="selector">.container</span> { <span class="property">padding</span>: <span class="value">0 10px</span>; }<br>
+                    }
+                </div>
+                
+                <h3 id="preprocessors">CSS Preprocessors</h3>
+                <p>CSS preprocessors like Sass and Less add features like variables, nesting, and functions to CSS.</p>
+                
+                <div class="example interactive-element" tabindex="0" data-tooltip="Click to copy code">
+                    <div class="example-title">Sass Example</div>
+                    <span class="comment">// Variables</span><br>
+                    <span class="variable">$primary-color</span>: <span class="value">#3498db</span>;<br><br>
+                    <span class="comment">// Nesting</span><br>
+                    <span class="selector">.navbar</span> {<br>
+                    &nbsp;&nbsp;<span class="property">background</span>: <span class="value">$primary-color</span>;<br><br>
+                    &nbsp;&nbsp;<span class="selector">ul</span> {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">margin</span>: <span class="value">0</span>;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="property">padding</span>: <span class="value">0</span>;<br><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="selector">li</span> { <span class="property">list-style</span>: <span class="value">none</span>; }<br>
+                    &nbsp;&nbsp;}<br>
+                    }
+                </div>
+            </section>
+            
+            <section id="frameworks">
+                <h2>CSS Frameworks</h2>
+                <p>CSS frameworks provide pre-written CSS that makes web development faster and easier.</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Bootstrap</h4>
+                        <p>Popular framework with responsive grid system and components</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Tailwind CSS</h4>
+                        <p>Utility-first framework for rapidly building custom designs</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Foundation</h4>
+                        <p>Responsive framework with mobile-first approach</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Bulma</h4>
+                        <p>Modern CSS framework based on Flexbox</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="certifications">
+                <h2>CSS Certifications</h2>
+                <p>Professional certifications validate your CSS skills and knowledge.</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>W3C CSS Certification</h4>
+                        <p>Official certification from the World Wide Web Consortium</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>CIW Web Design Specialist</h4>
+                        <p>Comprehensive web design certification including CSS</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Adobe Certified Expert</h4>
+                        <p>Certification for Adobe tools including web design</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="projects">
+                <h2>Open Source Projects</h2>
+                <p>Contribute to open source projects to gain real-world CSS experience.</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Bootstrap</h4>
+                        <p>Popular CSS framework with extensive documentation</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Materialize</h4>
+                        <p>Modern responsive front-end framework based on Material Design</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Bulma</h4>
+                        <p>Modern CSS framework based on Flexbox</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="resources">
+                <h2>Learning Resources</h2>
+                <p>Additional resources to continue your CSS learning journey.</p>
+                
+                <div class="concept-grid">
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>MDN Web Docs</h4>
+                        <p>Comprehensive CSS documentation and tutorials</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>CSS-Tricks</h4>
+                        <p>Articles, tutorials, and resources for CSS developers</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>Codecademy</h4>
+                        <p>Interactive CSS courses and projects</p>
+                    </div>
+                    <div class="concept-card interactive-element" tabindex="0">
+                        <h4>freeCodeCamp</h4>
+                        <p>Free coding curriculum including CSS projects</p>
+                    </div>
+                </div>
+            </section>
+            
+            <footer>
+                <div class="footer-content">
+                    <p>© 2025 CSS Learning Guide. All rights reserved.</p>
+                    <p>This educational resource is designed to help developers master CSS from basics to advanced concepts.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/AnandBinuArjun" class="social-link interactive-element" tabindex="0">GitHub</a>
+                        <a href="#" class="social-link interactive-element" tabindex="0">Twitter</a>
+                        <a href="#" class="social-link interactive-element" tabindex="0">LinkedIn</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="#beginner" class="interactive-element">Beginner Topics</a></li>
+                    <li><a href="#intermediate" class="interactive-element">Intermediate Topics</a></li>
+                    <li><a href="#advanced" class="interactive-element">Advanced Topics</a></li>
+                    <li><a href="#frameworks" class="interactive-element">CSS Frameworks</a></li>
+                    <li><a href="#certifications" class="interactive-element">Certifications</a></li>
+                    <li><a href="#projects" class="interactive-element">Open Source Projects</a></li>
+                    <li><a href="#resources" class="interactive-element">Learning Resources</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Popular Topics</h3>
+                <ul>
+                    <li><a href="#flexbox" class="interactive-element">Flexbox Guide</a></li>
+                    <li><a href="#css-grid" class="interactive-element">CSS Grid Layout</a></li>
+                    <li><a href="#animations" class="interactive-element">CSS Animations</a></li>
+                    <li><a href="#media-queries" class="interactive-element">Responsive Design</a></li>
+                    <li><a href="#css-variables" class="interactive-element">CSS Variables</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Code Snippets</h3>
+                <ul>
+                    <li><a href="#" class="interactive-element" data-tooltip="Quick copy: Center elements with Flexbox">Centering Elements</a></li>
+                    <li><a href="#" class="interactive-element" data-tooltip="Quick copy: Responsive navigation menu">Responsive Navigation</a></li>
+                    <li><a href="#" class="interactive-element" data-tooltip="Quick copy: CSS reset for consistent styling">CSS Reset</a></li>
+                    <li><a href="#" class="interactive-element" data-tooltip="Quick copy: Modern button styles">Button Styles</a></li>
+                    <li><a href="#" class="interactive-element" data-tooltip="Quick copy: Form styling with validation">Form Styling</a></li>
+                </ul>
+            </div>
+        </aside>
+        
+        <div class="reading-progress" id="reading-progress"></div>
+        
+        <!-- Floating Action Button -->
+        <button class="fab" id="fab" aria-label="Menu">
+            <span class="fab-icon">+</span>
+        </button>
+        
+        <!-- FAB Menu -->
+        <div class="fab-menu" id="fab-menu">
+            <div class="fab-menu-item" data-action="top" tabindex="0">
+                <span class="fab-menu-icon">↑</span>
+                <span class="fab-menu-label">Top</span>
+            </div>
+            <div class="fab-menu-item" data-action="search" tabindex="0">
+                <span class="fab-menu-icon">🔍</span>
+                <span class="fab-menu-label">Search</span>
+            </div>
+            <div class="fab-menu-item" data-action="dark-mode" tabindex="0">
+                <span class="fab-menu-icon">🌙</span>
+                <span class="fab-menu-label">Theme</span>
+            </div>
+            <div class="fab-menu-item" data-action="print" tabindex="0">
+                <span class="fab-menu-icon">🖨️</span>
+                <span class="fab-menu-label">Print</span>
+            </div>
+            <div class="fab-menu-item" data-action="share" tabindex="0">
+                <span class="fab-menu-icon">🔗</span>
+                <span class="fab-menu-label">Share</span>
+            </div>
+            <div class="fab-menu-item" data-action="feedback" tabindex="0">
+                <span class="fab-menu-icon">💬</span>
+                <span class="fab-menu-label">Feedback</span>
+            </div>
+            <div class="fab-menu-item" data-action="help" tabindex="0">
+                <span class="fab-menu-icon">❓</span>
+                <span class="fab-menu-label">Help</span>
+            </div>
+        </div>
+        
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="toggle-icon">🌙</span>
+        </button>
+    </div>
+    
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+</body>
+</html>
